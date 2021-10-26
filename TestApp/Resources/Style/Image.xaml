@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:p="clr-namespace:TestApp.Properties">
+
+    <!-- LOGO IMAGE -->
+    <Style TargetType="Image" x:Key="LogoImage">
+
+        <Setter Property="Source" Value="pack://application:,,,/Resources/Icons/free-icon-math-book-dark-theme.png"></Setter>
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
+                <Setter Property="Source" Value="pack://application:,,,/Resources/Icons/free-icon-math-book-light-theme.png"></Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+                <Setter Property="Source" Value="pack://application:,,,/Resources/Icons/free-icon-math-book-dark-theme.png"></Setter>
+            </DataTrigger>
+        </Style.Triggers>
+
+    </Style>
+
+</ResourceDictionary>

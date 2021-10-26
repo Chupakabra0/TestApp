@@ -1,0 +1,20 @@
+﻿TestApp
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\Alexandr Safiyulin\Desktop\TestApp\TestApp\obj\Debug\netcoreapp3.1\
+TestApp
+none
+false
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\Alexandr Safiyulin\Desktop\TestApp\TestApp\App.xaml
+1098768130
+
+12-1513684260
+2001859425027
+MVVM\Views\BlankPage\BlankPage.xaml;MVVM\Views\MainView\MainView.xaml;MVVM\Views\TestPage\TestPage.xaml;Resources\Style\Colors.xaml;Resources\Style\Fonts.xaml;Resources\Style\Image.xaml;Resources\Style\Label.xaml;Resources\Style\MenuItem.xaml;Resources\Style\Path.xaml;Resources\Style\ToggleButton.xaml;
+
+False
+

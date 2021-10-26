@@ -1,0 +1,106 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:p="clr-namespace:TestApp.Properties">
+
+    <Style TargetType="RadioButton"
+           x:Key="MenuItem">
+
+        <Style.Setters>
+        
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <UniformGrid HorizontalAlignment="Stretch"
+                                     VerticalAlignment="Stretch"
+                                     Background="{TemplateBinding Background}"
+                                     x:Name="MenuItemGrid">
+
+                            <Label VerticalAlignment="Center"
+                                   Background="{TemplateBinding Background}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontFamily="{TemplateBinding FontFamily}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   Margin="48, 0, 0, 0">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <!--<Image Source="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}"
+                                           Height="18" Width="18"></Image>-->
+
+                                    <Canvas HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Height="18" Width="18">
+
+                                        <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                              Fill="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+                                              StrokeThickness="0.5">
+
+                                            <Path.Data>
+                                                <PathGeometry Figures="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}">
+                                                </PathGeometry>
+                                            </Path.Data>
+
+                                        </Path>
+
+                                    </Canvas>
+
+                                    <TextBlock Text="{TemplateBinding Content}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Margin="23, 0, 0, 0">
+                                    </TextBlock>
+
+                                    <RadioButton Visibility="Collapsed"
+                                                 IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+                                                 x:Name="Checker"></RadioButton>
+
+                                </StackPanel>
+
+                            </Label>
+
+                        </UniformGrid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Foreground" Value="{StaticResource AppTextBlueBrush}"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+
+            <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+
+            <Setter Property="Height" Value="40"></Setter>
+
+        </Style.Setters>
+
+        <Style.Triggers>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked}" Value="True"></Condition>
+                    <Condition Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False"></Condition>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Foreground" Value="{StaticResource AppBlackBrush}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked}" Value="True"></Condition>
+                    <Condition Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True"></Condition>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Foreground" Value="{StaticResource AppWhiteBrush}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+        </Style.Triggers>
+
+    </Style>
+
+</ResourceDictionary>

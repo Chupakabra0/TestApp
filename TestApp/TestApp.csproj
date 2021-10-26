@@ -1,0 +1,125 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Fonts\Work Sans\**" />
+    <EmbeddedResource Remove="Resources\Fonts\Work Sans\**" />
+    <None Remove="Resources\Fonts\Work Sans\**" />
+    <Page Remove="Resources\Fonts\Work Sans\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\Poppins\Poppins-Black.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Bold.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Italic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Light.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-LightItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Medium.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Regular.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-SemiBold.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-Thin.ttf" />
+    <None Remove="Resources\Fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Black.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-BlackItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Bold.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-BoldItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Italic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Light.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-LightItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Medium.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-MediumItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Regular.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-SemiBold.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-Thin.ttf" />
+    <None Remove="Resources\Fonts\WorkSans\WorkSans-ThinItalic.ttf" />
+    <None Remove="Resources\Icons\free-icon-math-book-dark-theme.png" />
+    <None Remove="Resources\Icons\free-icon-math-book-light-theme.png" />
+    <None Remove="Resources\Icons\home.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2021.2.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Black.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Italic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Light.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-LightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Black.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-BlackItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Bold.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Italic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Light.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-LightItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Medium.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-MediumItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Regular.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-Thin.ttf" />
+    <Resource Include="Resources\Fonts\WorkSans\WorkSans-ThinItalic.ttf" />
+    <Resource Include="Resources\Icons\free-icon-math-book-dark-theme.png" />
+    <Resource Include="Resources\Icons\free-icon-math-book-light-theme.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

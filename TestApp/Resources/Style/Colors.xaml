@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- FOREGROUND COLORS -->
+
+    <!-- Red color -->
+    <Color x:Key="AppRedColor">#FF808B</Color>
+    <SolidColorBrush x:Key="AppRedBrush" Color="{StaticResource AppRedColor}"></SolidColorBrush>
+
+    <!-- Blue color -->
+    <Color x:Key="AppBlueColor">#5E81F4</Color>
+    <SolidColorBrush x:Key="AppBlueBrush" Color="{StaticResource AppBlueColor}"></SolidColorBrush>
+
+    <!-- Light blue color -->
+    <Color x:Key="AppLightBlueColor">#F5F5FB</Color>
+    <SolidColorBrush x:Key="AppLightBlueBrush" Color="{StaticResource AppLightBlueColor}"></SolidColorBrush>
+
+    <!-- Text blue color -->
+    <Color x:Key="AppTextBlueColor">#A2A2C2</Color>
+    <SolidColorBrush x:Key="AppTextBlueBrush" Color="{StaticResource AppTextBlueColor}"></SolidColorBrush>
+
+    <!-- Text white color -->
+    <Color x:Key="AppTextWhiteColor">#E5E5F3</Color>
+    <SolidColorBrush x:Key="AppTextWhiteBrush" Color="{StaticResource AppTextWhiteColor}"></SolidColorBrush>
+
+    <!-- Text fiolet color -->
+    <Color x:Key="AppTextFioletColor">#1414A3</Color>
+    <SolidColorBrush x:Key="AppTextFioletBrush" Color="{StaticResource AppTextFioletColor}"></SolidColorBrush>
+
+    <!-- Text light fiolet color -->
+    <Color x:Key="AppTextLightFioletColor">#48489F</Color>
+    <SolidColorBrush x:Key="AppTextLightFioletBrush" Color="{StaticResource AppTextLightFioletColor}"></SolidColorBrush>
+
+    <!-- Text very light fiolet color (YES I'M FUCKIN' SERIOUS) -->
+    <Color x:Key="AppTextVeryLightFioletColor">#BABADA</Color>
+    <SolidColorBrush x:Key="AppTextVeryLightFioletBrush" Color="{StaticResource AppTextVeryLightFioletColor}"></SolidColorBrush>
+
+    <!-- White color -->
+    <Color x:Key="AppWhiteColor">#FEFEFE</Color>
+    <SolidColorBrush x:Key="AppWhiteBrush" Color="{StaticResource AppWhiteColor}"></SolidColorBrush>
+
+    <!-- Black color -->
+    <Color x:Key="AppBlackColor">#111026</Color>
+    <SolidColorBrush x:Key="AppBlackBrush" Color="{StaticResource AppBlackColor}"></SolidColorBrush>
+    
+    <!-- Grey color -->
+    <Color x:Key="AppGreyColor">#333333</Color>
+    <SolidColorBrush x:Key="AppGreyBrush" Color="{StaticResource AppGreyColor}"></SolidColorBrush>
+
+    <!-- BACKGROUND COLORS -->
+
+    <!-- Light theme background -->
+    <Color x:Key="AppLightThemeBackgroundColor">#FEFEFE</Color>
+    <SolidColorBrush x:Key="AppLightThemeBackgroundBrush" Color="{StaticResource AppLightThemeBackgroundColor}"></SolidColorBrush>
+
+    <!-- Dark theme background -->
+    <Color x:Key="AppDarkThemeBackgroundColor">#313160</Color>
+    <SolidColorBrush x:Key="AppDarkThemeBackgroundBrush" Color="{StaticResource AppDarkThemeBackgroundColor}"></SolidColorBrush>
+
+</ResourceDictionary>

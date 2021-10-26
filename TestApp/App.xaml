@@ -1,0 +1,24 @@
+﻿<Application x:Class="TestApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MVVM/Views/MainView/MainView.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <!-- ResourceDictionaries of the project (ORDER IS FUCKIN IMPORTANT) -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Style/Colors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/Fonts.xaml"></ResourceDictionary>
+
+                <ResourceDictionary Source="Resources/Style/Image.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/Path.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/Label.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/MenuItem.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/ToggleButton.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
