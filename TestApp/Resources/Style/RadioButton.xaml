@@ -1,71 +1,56 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:b="clr-namespace:TestApp.Core.Converters.BooleanToVisibilityConverter">
+                    xmlns:b="clr-namespace:TestApp.Core.Converters.BooleanToVisibilityConverter"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:p="clr-namespace:TestApp.Properties">
 
     <b:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></b:BooleanToVisibilityConverter>
 
     <Style TargetType="RadioButton">
 
-        <Setter Property="Background" Value="{StaticResource AppWhiteBrush}"></Setter>
-        <Setter Property="BorderBrush" Value="{StaticResource AppGreyBrush}"></Setter>
+        <Style.Setters>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="{StaticResource AppGreyBrush}"></Setter>
 
-        <!--<Setter Property="Height" Value="18"></Setter>
-        <Setter Property="Width" Value="18"></Setter>
+            <Setter Property="Template">
 
-        <Setter Property="MaxHeight" Value="{Binding RelativeSource={RelativeSource Self}, Path=Height}"></Setter>
-        <Setter Property="MaxWidth" Value="{Binding RelativeSource={RelativeSource Self}, Path=Width}"></Setter>-->
+                <Setter.Value>
 
-        <Setter Property="Template">
+                    <ControlTemplate TargetType="RadioButton">
 
-            <Setter.Value>
-
-                <ControlTemplate TargetType="RadioButton">
-
-                    <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Margin="4">
-                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="18" Width="18">
-
-                            <Ellipse x:Name="MainEllipse"
+                        <StackPanel Orientation="Horizontal"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center"
-                                    Height="18"
-                                    Width="18"
-                                    Fill="{StaticResource AppWhiteBrush}"
-                                    Stroke="{StaticResource AppGreyBrush}"
-                                    StrokeThickness="1"></Ellipse>
+                                    Margin="2">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="18" Width="18">
 
-                            <Ellipse x:Name="CheckEllipse"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    Height="11"
-                                    Width="11"
-                                    Fill="{StaticResource AppGreyBrush}"
-                                    Stroke="{StaticResource AppGreyBrush}"
-                                    StrokeThickness="1"
-                                    Visibility="{Binding RelativeSource={RelativeSource AncestorType=RadioButton},
-                                                 Path=IsChecked, UpdateSourceTrigger=PropertyChanged,
-                                                 Converter={StaticResource BooleanToVisibilityConverter}}">
-                            </Ellipse>
+                                <Ellipse x:Name="MainEllipse"
+                                        Style="{StaticResource RadioButtonMainEllipse}"></Ellipse>
 
-                        </Grid>
+                                <Ellipse x:Name="CheckEllipse"
+                                        Style="{StaticResource RadioButtonCheckEllipse}"
+                                        Visibility="{Binding RelativeSource={RelativeSource AncestorType=RadioButton},
+                                                     Path=IsChecked, UpdateSourceTrigger=PropertyChanged,
+                                                     Converter={StaticResource BooleanToVisibilityConverter}}">
+                                </Ellipse>
 
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                                   Width="100" TextWrapping="Wrap"
-                                   Style="{StaticResource BoxText}"
-                                   Margin="15, 0, 0, 0">
-                            <ContentPresenter></ContentPresenter>
-                        </TextBlock>
+                            </Grid>
 
-                    </StackPanel>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       Width="100" TextWrapping="Wrap"
+                                       Style="{StaticResource BoxText}"
+                                       Margin="15, 0, 0, 0">
+                                <ContentPresenter></ContentPresenter>
+                            </TextBlock>
 
-                </ControlTemplate>
+                        </StackPanel>
 
-            </Setter.Value>
+                    </ControlTemplate>
 
-        </Setter>
+                </Setter.Value>
 
+            </Setter>
+        </Style.Setters>
     </Style>
 
 </ResourceDictionary>

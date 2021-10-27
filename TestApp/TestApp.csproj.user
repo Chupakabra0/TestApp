@@ -24,6 +24,9 @@
     <Page Update="MVVM\Views\TestPage\TestPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Style\CheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Style\Colors.xaml">
       <SubType>Designer</SubType>
     </Page>
