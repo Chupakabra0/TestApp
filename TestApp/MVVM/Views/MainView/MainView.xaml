@@ -478,7 +478,8 @@
             <!-- CONTENT PRESENTER -->
             <UniformGrid Grid.Row="1" Grid.Column="2"
                          Margin="25">
-                <Frame Content="{Binding Path=CurrentView}"></Frame>
+                    <Frame Content="{Binding Path=CurrentView}"
+                       NavigationUIVisibility="Hidden"></Frame>
             </UniformGrid>
 
         </Grid>
