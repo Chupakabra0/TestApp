@@ -21,8 +21,14 @@
 
         <TextBlock Style="{StaticResource Content}" Text="Тестовый текст, который я пишу для теста..."></TextBlock>
 
-        <RadioButton Content="Test">
-        </RadioButton>
+        <GroupBox Padding="20" BorderThickness="0">
+            <StackPanel>
+                <RadioButton Content="Test1"></RadioButton>
+                <RadioButton Content="Test2"></RadioButton>
+                <RadioButton Content="Test3"></RadioButton>
+                <RadioButton Content="Test4"></RadioButton>
+            </StackPanel>
+        </GroupBox>
 
     </StackPanel>
 </Page>
