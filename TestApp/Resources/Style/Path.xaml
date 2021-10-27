@@ -55,6 +55,7 @@
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
 
         <Style.Triggers>
+
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
@@ -77,6 +78,30 @@
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
             </DataTrigger>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+
         </Style.Triggers>
 
     </Style>
@@ -94,6 +119,7 @@
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
 
         <Style.Triggers>
+
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
@@ -124,6 +150,38 @@
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
             </DataTrigger>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+
         </Style.Triggers>
 
     </Style>
