@@ -21,7 +21,7 @@
                         <StackPanel Orientation="Horizontal"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center"
-                                    Margin="4">
+                                    Margin="2">
                             <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="18" Width="18">
 
                                 <Ellipse x:Name="MainEllipse"
