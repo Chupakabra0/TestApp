@@ -42,4 +42,90 @@
 
     </Style>
 
+    <Style x:Key="RadioButtonMainEllipse" TargetType="Ellipse">
+
+        <Setter Property="Fill" Value="Transparent"></Setter>
+        <Setter Property="Stroke" Value="{StaticResource AppGreyBrush}"></Setter>
+        <Setter Property="StrokeThickness" Value="1"></Setter>
+
+        <Setter Property="Height" Value="18"></Setter>
+        <Setter Property="Width" Value="18"></Setter>
+
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style x:Key="RadioButtonCheckEllipse" TargetType="Ellipse">
+
+        <Setter Property="Fill" Value="{StaticResource AppGreyBrush}"></Setter>
+        <Setter Property="Stroke" Value="{StaticResource AppGreyBrush}"></Setter>
+        <Setter Property="StrokeThickness" Value="1"></Setter>
+
+        <Setter Property="Height" Value="11"></Setter>
+        <Setter Property="Width" Value="11"></Setter>
+
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppGreyColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25"
+                                                 Value="{StaticResource AppWhiteColor}"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
+
+    </Style>
+
 </ResourceDictionary>
