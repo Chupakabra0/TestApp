@@ -10,7 +10,7 @@
         <Setter Property="FontSize" Value="26"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
 
-        <Setter Property="Foreground" Value="{StaticResource AppTextWhiteBrush}"></Setter>
+        <!--<Setter Property="Foreground" Value="{StaticResource AppTextWhiteBrush}"></Setter>-->
 
         <Style.Triggers>
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
@@ -18,8 +18,10 @@
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation To="{StaticResource AppTextFioletColor}" Duration="0:0:0.25"
-                                                            Storyboard.TargetProperty="Foreground.Color">
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
+                                            To="{StaticResource AppTextFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
@@ -28,14 +30,45 @@
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation To="{StaticResource AppTextWhiteColor}" Duration="0:0:0.25"
-                                                            Storyboard.TargetProperty="Foreground.Color">
+                            <ColorAnimation From="{StaticResource AppTextFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
 
             </DataTrigger>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
+                                            To="{StaticResource AppTextFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+
+            </DataTrigger>
+
         </Style.Triggers>
 
     </Style>
@@ -47,16 +80,17 @@
         <Setter Property="FontSize" Value="18"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
 
-        <Setter Property="Foreground" Value="{StaticResource AppTextLightFioletBrush}"></Setter>
-
         <Style.Triggers>
+
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
 
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation To="{StaticResource AppTextLightFioletColor}" Duration="0:0:0.25"
-                                                            Storyboard.TargetProperty="Foreground.Color">
+                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
@@ -65,16 +99,114 @@
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation To="{StaticResource AppTextVeryLightFioletColor}" Duration="0:0:0.25"
-                                                            Storyboard.TargetProperty="Foreground.Color">
+                            <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
+                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
 
             </DataTrigger>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
+                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+
+            </DataTrigger>
+
         </Style.Triggers>
 
+    </Style>
+
+    <!-- BOX TEXT -->
+    <Style TargetType="TextBlock" x:Key="BoxText">
+        <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
+
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
+                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True">
+
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
+                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextLightFioletColor}"
+                                            Duration="0:0:0.25"
+                                            Storyboard.TargetProperty="Foreground.Color">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+
+            </DataTrigger>
+
+        </Style.Triggers>
     </Style>
 
     <!-- SIDEBAR LABEL -->

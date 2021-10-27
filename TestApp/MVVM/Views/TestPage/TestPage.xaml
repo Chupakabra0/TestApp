@@ -14,9 +14,21 @@
     </Page.DataContext>
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+        
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                 Text="Тестовый заголовок" Padding="60, 30" Style="{StaticResource Header}">
         </TextBlock>
+
         <TextBlock Style="{StaticResource Content}" Text="Тестовый текст, который я пишу для теста..."></TextBlock>
+
+        <GroupBox Padding="20" BorderThickness="0">
+            <StackPanel>
+                <RadioButton Content="Test1"></RadioButton>
+                <RadioButton Content="Test2"></RadioButton>
+                <RadioButton Content="Test3"></RadioButton>
+                <RadioButton Content="Test4"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+
     </StackPanel>
 </Page>
