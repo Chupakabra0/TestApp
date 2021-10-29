@@ -5,13 +5,12 @@ using TestApp.MVVM.Views.BlankPage;
 using TestApp.MVVM.Views.TestPage;
 using TestApp.MVVM.Views.HomePage;
 using TestApp.MVVM.Views.SettingsPage;
-using System.Security.Principal;
-using System.DirectoryServices.AccountManagement;
+using System;
 
 namespace TestApp.MVVM.ViewModels.MainViewModel {
     public class MainViewModel : BaseViewModel.BaseViewModel {
 
-        public string userFullName { get { return UserPrincipal.Current.DisplayName; } set { } }
+        public string userFullName => Environment.UserName;
 
         public Page CurrentView { get; set; } = new HomePage();
 
