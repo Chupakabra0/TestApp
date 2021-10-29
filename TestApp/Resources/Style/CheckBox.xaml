@@ -52,7 +52,7 @@
                                 <Condition Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False"></Condition>
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.EnterActions>
-                                <BeginStoryboard>
+                                <BeginStoryboard x:Name="LightStory">
                                     <Storyboard>
                                         <ColorAnimation To="{StaticResource AppGreyColor}" Duration="0:0:0.25"
                                                         Storyboard.TargetProperty="Background.Color"
@@ -62,14 +62,15 @@
                                 </BeginStoryboard>
                             </MultiDataTrigger.EnterActions>
                             <MultiDataTrigger.ExitActions>
-                                <BeginStoryboard>
+                                <RemoveStoryboard BeginStoryboardName="LightStory"></RemoveStoryboard>
+                                <!--<BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="Transparent" Duration="0:0:0.25"
+                                        <ColorAnimation To="{StaticResource AppWhiteColor}" Duration="0:0:0.25"
                                                         Storyboard.TargetProperty="Background.Color"
                                                         Storyboard.TargetName="MainBorder">
                                         </ColorAnimation>
                                     </Storyboard>
-                                </BeginStoryboard>
+                                </BeginStoryboard>-->
                             </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
 
@@ -79,7 +80,7 @@
                                 <Condition Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="True"></Condition>
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.EnterActions>
-                                <BeginStoryboard>
+                                <BeginStoryboard x:Name="DarkStory">
                                     <Storyboard>
                                         <ColorAnimation To="{StaticResource AppWhiteColor}" Duration="0:0:0.25"
                                                         Storyboard.TargetProperty="Background.Color"
@@ -89,14 +90,15 @@
                                 </BeginStoryboard>
                             </MultiDataTrigger.EnterActions>
                             <MultiDataTrigger.ExitActions>
-                                <BeginStoryboard>
+                                <RemoveStoryboard BeginStoryboardName="DarkStory"></RemoveStoryboard>
+                                <!--<BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="Transparent" Duration="0:0:0.25"
+                                        <ColorAnimation To="{StaticResource AppGreyColor}" Duration="0:0:0.25"
                                                         Storyboard.TargetProperty="Background.Color"
                                                         Storyboard.TargetName="MainBorder">
                                         </ColorAnimation>
                                     </Storyboard>
-                                </BeginStoryboard>
+                                </BeginStoryboard>-->
                             </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
 
