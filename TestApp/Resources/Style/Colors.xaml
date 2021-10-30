@@ -23,6 +23,10 @@
     <Color x:Key="AppTextWhiteColor">#E5E5F3</Color>
     <SolidColorBrush x:Key="AppTextWhiteBrush" Color="{StaticResource AppTextWhiteColor}"></SolidColorBrush>
 
+    <!-- Text light white color -->
+    <Color x:Key="AppTextLightWhiteColor">#F3F3F3</Color>
+    <SolidColorBrush x:Key="AppTextLightWhiteBrush" Color="{StaticResource AppTextLightWhiteColor}"></SolidColorBrush>
+
     <!-- Text fiolet color -->
     <Color x:Key="AppTextFioletColor">#1414A3</Color>
     <SolidColorBrush x:Key="AppTextFioletBrush" Color="{StaticResource AppTextFioletColor}"></SolidColorBrush>
@@ -46,6 +50,10 @@
     <!-- Grey color -->
     <Color x:Key="AppGreyColor">#333333</Color>
     <SolidColorBrush x:Key="AppGreyBrush" Color="{StaticResource AppGreyColor}"></SolidColorBrush>
+
+    <!-- Light grey color -->
+    <Color x:Key="AppLightGreyColor">#E2E8F0</Color>
+    <SolidColorBrush x:Key="AppLightGreyBrush" Color="{StaticResource AppLightGreyColor}"></SolidColorBrush>
 
     <!-- BACKGROUND COLORS -->
 

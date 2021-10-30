@@ -39,5 +39,7 @@
             </StackPanel>
         </GroupBox>
 
+        <TextBox Margin="20" Width="787"></TextBox>
+
     </StackPanel>
 </Page>
