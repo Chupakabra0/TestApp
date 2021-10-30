@@ -18,7 +18,7 @@
 
             <Setter.Value>
 
-                <ControlTemplate>
+                <ControlTemplate TargetType="TextBox">
 
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 
