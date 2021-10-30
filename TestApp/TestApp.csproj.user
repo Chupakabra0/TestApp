@@ -60,6 +60,9 @@
     <Page Update="Resources\Style\RadioButton.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Style\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Style\TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
