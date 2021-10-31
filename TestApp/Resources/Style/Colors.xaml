@@ -11,6 +11,10 @@
     <Color x:Key="AppBlueColor">#5E81F4</Color>
     <SolidColorBrush x:Key="AppBlueBrush" Color="{StaticResource AppBlueColor}"></SolidColorBrush>
 
+    <!-- Blue color -->
+    <Color x:Key="AppDarkBlueColor">#5959B6</Color>
+    <SolidColorBrush x:Key="AppDarkBlueBrush" Color="{StaticResource AppDarkBlueColor}"></SolidColorBrush>
+
     <!-- Light blue color -->
     <Color x:Key="AppLightBlueColor">#F5F5FB</Color>
     <SolidColorBrush x:Key="AppLightBlueBrush" Color="{StaticResource AppLightBlueColor}"></SolidColorBrush>

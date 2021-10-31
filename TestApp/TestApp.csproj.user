@@ -36,6 +36,9 @@
     <Page Update="MVVM\Views\TestPage\TestPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Style\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Style\CheckBox.xaml">
       <SubType>Designer</SubType>
     </Page>
