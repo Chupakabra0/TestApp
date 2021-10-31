@@ -43,6 +43,9 @@
 
         <Button Margin="20" Content="Log in" Style="{StaticResource BasicButton}"></Button>
         <Button Margin="20" Content="Back" Style="{StaticResource RoundButton}"></Button>
+        <Button Margin="20" Content="Method"
+                Style="{StaticResource BigTheoryButton}"
+                Tag="pack://application:,,,/Resources/Icons/m1-image.png"></Button>
 
     </StackPanel>
 </Page>

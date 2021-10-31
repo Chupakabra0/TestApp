@@ -51,7 +51,7 @@
                         <EventTrigger RoutedEvent="MouseEnter">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation To="{StaticResource AppTextBlueColor}"
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
                                                     Duration="0:0:0.25"
                                                     Storyboard.TargetName="ButtonBorder"
                                                     Storyboard.TargetProperty="Background.Color">
@@ -87,7 +87,7 @@
                         <EventTrigger RoutedEvent="PreviewMouseUp">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation To="{StaticResource AppTextBlueColor}"
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
                                                     Duration="0:0:0.1"
                                                     Storyboard.TargetName="ButtonBorder"
                                                     Storyboard.TargetProperty="Background.Color">
@@ -167,7 +167,7 @@
                         <EventTrigger RoutedEvent="MouseEnter">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation To="{StaticResource AppTextBlueColor}"
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
                                                     Duration="0:0:0.25"
                                                     Storyboard.TargetName="ButtonBorder"
                                                     Storyboard.TargetProperty="Background.Color">
@@ -203,7 +203,7 @@
                         <EventTrigger RoutedEvent="PreviewMouseUp">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation To="{StaticResource AppTextBlueColor}"
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
                                                     Duration="0:0:0.1"
                                                     Storyboard.TargetName="ButtonBorder"
                                                     Storyboard.TargetProperty="Background.Color">
@@ -220,6 +220,153 @@
 
         </Setter>
 
+    </Style>
+
+    <Style x:Key="BigTheoryButton" TargetType="Button" BasedOn="{StaticResource BasicButton}">
+
+        <Setter Property="Foreground" Value="{StaticResource AppWhiteBrush}"></Setter>
+
+        <Setter Property="Height" Value="97"></Setter>
+        <Setter Property="Width" Value="813"></Setter>
+
+        <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+
+                    <Grid>
+
+                        <Border x:Name="ButtonBorder"
+                                BorderThickness="0"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}">
+                        </Border>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Border x:Name="ImageBorder"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="Transparent"
+                                    Margin="25, 16"
+                                    Height="65"
+                                    Width="62"
+                                    CornerRadius="10"
+                                    BorderThickness="0"
+                                    Tag="{TemplateBinding Tag}">
+                                <Image Source="{Binding ElementName=ImageBorder, Path=Tag}"></Image>
+                            </Border>
+
+                            <StackPanel Grid.Column="1"
+                                        Orientation="Vertical"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Margin="0">
+
+                                <TextBlock Text="{TemplateBinding Content}"
+                                           FontFamily="{TemplateBinding FontFamily}"
+                                           FontSize="{TemplateBinding FontSize}"
+                                           Opacity="0.8">
+                                </TextBlock>
+
+                                <TextBlock Text="Теория"
+                                           FontFamily="{StaticResource PoppinsMedium}"
+                                           FontSize="11"
+                                           Opacity="1">
+                                </TextBlock>
+
+                            </StackPanel>
+
+                            <Path Grid.Column="2"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center"
+                                  Margin="18, 0"
+                                  Focusable="False"
+                                  Data="M33.2492 13.321L27.776 8.22013C27.5114 7.97355 27.1525 7.83502 26.7784 7.83502C26.4042 7.83502 26.0454 7.97355 25.7808 8.22013V8.22013C25.5163 8.4668 25.3677 8.8013 25.3677 9.15008C25.3677 9.49886 25.5163 9.83336 25.7808 10.08L30.7969 14.7587H2.03233C1.65811 14.7587 1.29922 14.8972 1.03461 15.1439C0.769996 15.3906 0.621338 15.7252 0.621338 16.074H0.621338C0.621338 16.4228 0.769996 16.7574 1.03461 17.0041C1.29922 17.2508 1.65811 17.3893 2.03233 17.3893H30.883L25.7808 22.1443C25.6496 22.2664 25.5455 22.4115 25.4745 22.5712C25.4035 22.7309 25.367 22.902 25.367 23.0749C25.367 23.2477 25.4035 23.4189 25.4745 23.5786C25.5455 23.7382 25.6496 23.8833 25.7808 24.0055C26.0454 24.2521 26.4042 24.3906 26.7784 24.3906C27.1525 24.3906 27.5114 24.2521 27.776 24.0055L33.2506 18.9033C34.0421 18.1617 34.4863 17.158 34.486 16.1119C34.4858 15.0657 34.0411 14.0623 33.2492 13.321Z"
+                                  Fill="White"
+                                  Stroke="Transparent"
+                                  Opacity="0.8">
+                            </Path>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource AppGreyBrush}"></Setter>
+                        </Trigger>
+
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+    
     </Style>
 
 </ResourceDictionary>
