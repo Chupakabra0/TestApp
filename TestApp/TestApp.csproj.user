@@ -10,6 +10,12 @@
     <Compile Update="MVVM\Views\BlankPage\BlankPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\Views\HomePage\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\Views\SettingsPage\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\Views\TestPage\TestPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,10 +24,22 @@
     <Page Update="MVVM\Views\BlankPage\BlankPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\HomePage\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\MainView\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\SettingsPage\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\TestPage\TestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\CheckBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Style\Colors.xaml">
@@ -40,6 +58,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Style\Label.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\RadioButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Style\ToggleButton.xaml">

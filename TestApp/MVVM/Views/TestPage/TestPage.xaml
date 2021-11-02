@@ -14,9 +14,38 @@
     </Page.DataContext>
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+        
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                 Text="Тестовый заголовок" Padding="60, 30" Style="{StaticResource Header}">
         </TextBlock>
+
         <TextBlock Style="{StaticResource Content}" Text="Тестовый текст, который я пишу для теста..."></TextBlock>
+
+        <GroupBox Padding="20" BorderThickness="0">
+            <StackPanel>
+                <RadioButton Content="Test1"></RadioButton>
+                <RadioButton Content="Test2"></RadioButton>
+                <RadioButton Content="Test3"></RadioButton>
+                <RadioButton Content="Test4"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Padding="20" BorderThickness="0">
+            <StackPanel>
+                <CheckBox Content="Test1"></CheckBox>
+                <CheckBox Content="Test2"></CheckBox>
+                <CheckBox Content="Test3"></CheckBox>
+                <CheckBox Content="Test4"></CheckBox>
+            </StackPanel>
+        </GroupBox>
+
+        <TextBox Margin="20" Width="800"></TextBox>
+
+        <Button Margin="20" Content="Log in" Style="{StaticResource BasicButton}"></Button>
+        <Button Margin="20" Content="Back" Style="{StaticResource RoundButton}"></Button>
+        <Button Margin="20" Content="Method"
+                Style="{StaticResource BigTheoryButton}"
+                Tag="pack://application:,,,/Resources/Icons/m1-image.png"></Button>
+
     </StackPanel>
 </Page>

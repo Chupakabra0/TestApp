@@ -1,0 +1,372 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="Button" x:Key="BasicButton">
+
+        <Setter Property="Background" Value="{StaticResource AppDarkBlueBrush}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource AppLightBlueBrush}"></Setter>
+
+        <Setter Property="Height" Value="46"></Setter>
+        <Setter Property="Width" Value="356"></Setter>
+
+        <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+
+        <Setter Property="BorderThickness" Value="0.5"></Setter>
+        <Setter Property="BorderBrush" Value="{StaticResource AppDarkThemeBackgroundBrush}"></Setter>
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+
+                    <Grid>
+
+                        <Border x:Name="ButtonBorder"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="7">
+
+                            <TextBlock HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                       Margin="{TemplateBinding Padding}"
+                                       Focusable="False" 
+                                       Text="{TemplateBinding Content}"
+                                       FontFamily="{TemplateBinding FontFamily}">
+                            </TextBlock>
+
+                        </Border>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource AppGreyBrush}"></Setter>
+                        </Trigger>
+
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="RoundButton" TargetType="Button" BasedOn="{StaticResource BasicButton}">
+
+        <Setter Property="Foreground" Value="{StaticResource AppWhiteBrush}"></Setter>
+
+        <Setter Property="Height" Value="28"></Setter>
+        <Setter Property="Width" Value="107"></Setter>
+
+        <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+
+                    <Grid>
+
+                        <Border x:Name="ButtonBorder"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10">
+
+                            <Grid>
+
+                                <TextBlock HorizontalAlignment="Left"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                           Margin="8, 4"
+                                           Focusable="False" 
+                                           Text="{TemplateBinding Content}"
+                                           FontFamily="{TemplateBinding FontFamily}"
+                                           FontSize="{TemplateBinding FontSize}"
+                                           Foreground="{TemplateBinding Foreground}">
+                                </TextBlock>
+
+                                <Path HorizontalAlignment="Right"
+                                      VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                      Margin="8, 4"
+                                      Focusable="False"
+                                      Data="M0.722856 9.63685L3.92343 12.2446C4.07816 12.3707 4.28799 12.4415 4.50678 12.4415C4.72556 12.4415 4.93539 12.3707 5.09012 12.2446V12.2446C5.24481 12.1185 5.3317 11.9475 5.3317 11.7692C5.3317 11.5909 5.2448 11.4199 5.09012 11.2938L2.15688 8.90186L18.9774 8.90184C19.1962 8.90183 19.4061 8.83099 19.5608 8.70488C19.7155 8.57877 19.8025 8.40773 19.8025 8.22938V8.22938C19.8025 8.05104 19.7155 7.88 19.5608 7.75389C19.4061 7.62778 19.1962 7.55693 18.9774 7.55694L2.10654 7.55696L5.0901 5.12605C5.16681 5.0636 5.22767 4.98943 5.26919 4.9078C5.31071 4.82616 5.33208 4.73866 5.33208 4.65029C5.33208 4.56192 5.31071 4.47441 5.26919 4.39278C5.22767 4.31115 5.16681 4.23698 5.09009 4.17453C4.93536 4.04847 4.72553 3.97765 4.50675 3.97765C4.28796 3.97765 4.07813 4.04847 3.9234 4.17453L0.72202 6.78297C0.259191 7.16212 -0.000553615 7.67523 -0.000396954 8.21005C-0.000240294 8.74487 0.259805 9.25788 0.722856 9.63685Z"
+                                      Fill="White"
+                                      Stroke="Transparent"
+                                      Opacity="0.8">
+                                </Path>
+
+                            </Grid>
+
+                        </Border>
+                    
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource AppGreyBrush}"></Setter>
+                        </Trigger>
+
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="BigTheoryButton" TargetType="Button" BasedOn="{StaticResource BasicButton}">
+
+        <Setter Property="Foreground" Value="{StaticResource AppWhiteBrush}"></Setter>
+
+        <Setter Property="Height" Value="97"></Setter>
+        <Setter Property="Width" Value="813"></Setter>
+
+        <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+
+                    <Grid>
+
+                        <Border x:Name="ButtonBorder"
+                                BorderThickness="0"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}">
+                        </Border>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Border x:Name="ImageBorder"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="Transparent"
+                                    Margin="25, 16"
+                                    Height="65"
+                                    Width="62"
+                                    CornerRadius="10"
+                                    BorderThickness="0"
+                                    Tag="{TemplateBinding Tag}">
+                                <Image Source="{Binding ElementName=ImageBorder, Path=Tag}"></Image>
+                            </Border>
+
+                            <StackPanel Grid.Column="1"
+                                        Orientation="Vertical"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Margin="0">
+
+                                <TextBlock Text="{TemplateBinding Content}"
+                                           FontFamily="{TemplateBinding FontFamily}"
+                                           FontSize="{TemplateBinding FontSize}"
+                                           Opacity="0.8">
+                                </TextBlock>
+
+                                <TextBlock Text="Теория"
+                                           FontFamily="{StaticResource PoppinsMedium}"
+                                           FontSize="11"
+                                           Opacity="1">
+                                </TextBlock>
+
+                            </StackPanel>
+
+                            <Path Grid.Column="2"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center"
+                                  Margin="18, 0"
+                                  Focusable="False"
+                                  Data="M33.2492 13.321L27.776 8.22013C27.5114 7.97355 27.1525 7.83502 26.7784 7.83502C26.4042 7.83502 26.0454 7.97355 25.7808 8.22013V8.22013C25.5163 8.4668 25.3677 8.8013 25.3677 9.15008C25.3677 9.49886 25.5163 9.83336 25.7808 10.08L30.7969 14.7587H2.03233C1.65811 14.7587 1.29922 14.8972 1.03461 15.1439C0.769996 15.3906 0.621338 15.7252 0.621338 16.074H0.621338C0.621338 16.4228 0.769996 16.7574 1.03461 17.0041C1.29922 17.2508 1.65811 17.3893 2.03233 17.3893H30.883L25.7808 22.1443C25.6496 22.2664 25.5455 22.4115 25.4745 22.5712C25.4035 22.7309 25.367 22.902 25.367 23.0749C25.367 23.2477 25.4035 23.4189 25.4745 23.5786C25.5455 23.7382 25.6496 23.8833 25.7808 24.0055C26.0454 24.2521 26.4042 24.3906 26.7784 24.3906C27.1525 24.3906 27.5114 24.2521 27.776 24.0055L33.2506 18.9033C34.0421 18.1617 34.4863 17.158 34.486 16.1119C34.4858 15.0657 34.0411 14.0623 33.2492 13.321Z"
+                                  Fill="White"
+                                  Stroke="Transparent"
+                                  Opacity="0.8">
+                            </Path>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource AppGreyBrush}"></Setter>
+                        </Trigger>
+
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.25"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource AppDarkLightBlueColor}"
+                                                    Duration="0:0:0.1"
+                                                    Storyboard.TargetName="ButtonBorder"
+                                                    Storyboard.TargetProperty="Background.Color">
+                                    </ColorAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+    
+    </Style>
+
+</ResourceDictionary>

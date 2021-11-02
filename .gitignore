@@ -4,6 +4,9 @@
 # Disable .idea
 *.idea/
 
+# Disable .vs
+*.vs/
+
 # User-specific files
 *.suo
 *.user

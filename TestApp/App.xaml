@@ -16,6 +16,11 @@
                 <ResourceDictionary Source="Resources/Style/Label.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Style/MenuItem.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Style/ToggleButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/RadioButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/CheckBox.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/TextBox.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/Button.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/ScrollBar.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>

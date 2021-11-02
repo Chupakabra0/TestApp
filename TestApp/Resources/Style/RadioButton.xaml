@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:b="clr-namespace:TestApp.Core.Converters.BooleanToVisibilityConverter"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:p="clr-namespace:TestApp.Properties">
+
+    <b:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></b:BooleanToVisibilityConverter>
+
+    <Style TargetType="RadioButton">
+
+        <Style.Setters>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="{StaticResource AppGreyBrush}"></Setter>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="RadioButton">
+
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Margin="2">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="18" Width="18">
+
+                                <Ellipse x:Name="MainEllipse"
+                                        Style="{StaticResource RadioButtonMainEllipse}"></Ellipse>
+
+                                <Ellipse x:Name="CheckEllipse"
+                                        Style="{StaticResource RadioButtonCheckEllipse}"
+                                        Visibility="{Binding RelativeSource={RelativeSource AncestorType=RadioButton},
+                                                     Path=IsChecked, UpdateSourceTrigger=PropertyChanged,
+                                                     Converter={StaticResource BooleanToVisibilityConverter}}">
+                                </Ellipse>
+
+                            </Grid>
+
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       Width="100" TextWrapping="Wrap"
+                                       Style="{StaticResource BoxText}"
+                                       Margin="15, 0, 0, 0">
+                                <ContentPresenter></ContentPresenter>
+                            </TextBlock>
+
+                        </StackPanel>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>
