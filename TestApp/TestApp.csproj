@@ -67,6 +67,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TestLibrary\TestLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Fonts\Poppins\Poppins-Black.ttf" />
     <Resource Include="Resources\Fonts\Poppins\Poppins-BlackItalic.ttf" />
     <Resource Include="Resources\Fonts\Poppins\Poppins-Bold.ttf" />
