@@ -4,13 +4,67 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestApp.MVVM.Views.BlankPage"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:theoryViewModel="clr-namespace:TestApp.MVVM.ViewModels.TheoryViewModel"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+      xmlns:theory="clr-namespace:TestApp.Core.Repository.Theory"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="BlankPage">
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                Text="Тут будет теория, наверное" Padding="60, 30" Style="{StaticResource Header}">
-        </TextBlock>
-    </Grid>
+    <Page.DataContext>
+        <ObjectDataProvider ObjectType="{x:Type theoryViewModel:TheoryViewModel}">
+            <ObjectDataProvider.ConstructorParameters>
+                <theory:DummyTheoryRepository></theory:DummyTheoryRepository>
+            </ObjectDataProvider.ConstructorParameters>
+        </ObjectDataProvider>
+    </Page.DataContext>
+
+    <StackPanel Orientation="Vertical">
+
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsMenuEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+            
+            <Button Margin="20" Content="Критерій Севіджа"
+                    Style="{StaticResource BigTheoryButton}"
+                    Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                    Command="{Binding OpenSavageCommand}">
+            </Button>
+
+            <Button Margin="20" Content="Критерій Неймана-Пірсона"
+                Style="{StaticResource BigTheoryButton}"
+                Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                Command="{Binding OpenPearsonCommand}">
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Visibility="{Binding IsTheoryChosen, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+            <Button Margin="30, 10"
+                    Content="Back" HorizontalAlignment="Left"
+                    FontSize="18"
+                    Style="{StaticResource RoundButton}"
+                    Command="{Binding BackCommand}">
+            </Button>
+
+            <FlowDocumentPageViewer Width="800" Zoom="150" Document="{Binding Document}">
+
+                <FlowDocumentPageViewer.Template>
+                    <ControlTemplate TargetType="{x:Type FlowDocumentPageViewer}">
+                        <AdornerDecorator>
+                            <DocumentPageView FlowDocumentPageViewer.IsMasterPage="True" />
+                        </AdornerDecorator>
+                    </ControlTemplate>
+                </FlowDocumentPageViewer.Template>
+            </FlowDocumentPageViewer>
+
+            <Button Margin="30, 10"
+                    Content="Тест" HorizontalAlignment="Right"
+                    Style="{StaticResource BasicButton}">
+            </Button>
+
+        </StackPanel>
+
+    </StackPanel>
 </Page>

@@ -19,6 +19,8 @@ namespace TestApp.MVVM.ViewModels.MainViewModel {
         public ICommand Command_test => new RelayCommand(this.Open_test_page);
         public ICommand Command_settings => new RelayCommand(this.Open_settings_page);
 
+        private Page TheoryPage = new BlankPage();
+
         void Open_home_page()
         {
             this.CurrentView = new HomePage();
@@ -28,7 +30,7 @@ namespace TestApp.MVVM.ViewModels.MainViewModel {
             this.CurrentView = new TestPage();
         }
         void Open_theory_page() {
-            this.CurrentView = new BlankPage();
+            this.CurrentView = this.TheoryPage;
         }
         void Open_settings_page()
         {
