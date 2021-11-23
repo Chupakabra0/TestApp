@@ -39,10 +39,11 @@
 
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Visibility="{Binding IsTheoryChosen, Converter={StaticResource BooleanToVisibilityConverter}}">
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsTheoryChosen, Converter={StaticResource BooleanToVisibilityConverter}}">
 
             <Button Margin="30, 10"
-                    Content="Back" HorizontalAlignment="Left"
+                    Content="Назад" HorizontalAlignment="Left"
                     FontSize="18"
                     Style="{StaticResource RoundButton}"
                     Command="{Binding BackCommand}">

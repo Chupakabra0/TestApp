@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestApp.MVVM.Views.TestPage"
       xmlns:testviewmodel="clr-namespace:TestApp.MVVM.ViewModels.TestViewModel"
+      xmlns:latex="clr-namespace:WpfMath.Controls;assembly=WpfMath"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TestPage">
@@ -13,7 +14,68 @@
         <testviewmodel:TestViewModel></testviewmodel:TestViewModel>
     </Page.DataContext>
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+    <StackPanel Orientation="Vertical">
+
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsMenuEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+            <Button Margin="20"
+                    Content="Тест з теми &quot;Критерій Севіджа&quot;"
+                    Style="{StaticResource BigTestButton}"
+                    Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                    Command="{Binding OpenSavageCommand}">
+            </Button>
+
+            <Button Margin="20"
+                    Content="Тест з теми &quot;Критерій Неймана-Пірсона&quot;"
+                    Style="{StaticResource BigTestButton}"
+                    Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                    Command="{Binding OpenPearsonCommand}">
+            </Button>
+
+            <latex:FormulaControl Style="{StaticResource BasicFormula}" Formula="Q = \pmatrix{1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 }"></latex:FormulaControl>
+
+            <!--<TextBlock Style="{StaticResource Content}">
+                Нехай ОПР вірішила, що природа знаходиться в стані β<Run BaselineAlignment="Subscript">j</Run>.	Який розв’язок α вона обере?
+            </TextBlock>-->
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsTestChosen, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Margin="20"
+                    Width="800">
+
+            <!-- COMMON TESTS -->
+
+            <Button Margin="0, 10" Content="Назад"
+                    HorizontalAlignment="Left" FontSize="18"
+                    Style="{StaticResource RoundButton}"
+                    Command="{Binding BackCommand}">
+            </Button>
+
+            <!--<Label>
+                <StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:latex="clr-namespace:WpfMath.Controls;assembly=WpfMath" Orientation="Vertical">
+                    
+                    <TextBlock
+                        Text="Пускай задана матрица полезности Q. Первое состояние природы является контролированным, а пороговое значение равно 6. Выберете строку матрицы потерь, которую следует вычеркнуть, если матрица Q:"
+                        Style="{StaticResource Content}">
+                    </TextBlock>
+
+                    <latex:FormulaControl HorizontalAlignment="Center"
+                                          Formula="Q = \pmatrix{7 &amp; 2 \cr 4 &amp; 3 \cr 5 &amp; 0 }" Margin="20" Scale="25">
+                    </latex:FormulaControl>
+
+                    <TextBox Width="750"></TextBox>
+
+                </StackPanel>
+            </Label>-->
+
+        </StackPanel>
+
+    </StackPanel>
+
+    <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
         
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                 Text="Тестовый заголовок" Padding="60, 30" Style="{StaticResource Header}">
@@ -47,5 +109,5 @@
                 Style="{StaticResource BigTheoryButton}"
                 Tag="pack://application:,,,/Resources/Icons/m1-image.png"></Button>
 
-    </StackPanel>
+    </StackPanel>-->
 </Page>

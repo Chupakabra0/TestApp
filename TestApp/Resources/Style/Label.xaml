@@ -76,9 +76,11 @@
     <!-- CONTENT STYLE -->
     <Style x:Key="Content" TargetType="TextBlock">
 
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
         <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}"></Setter>
         <Setter Property="FontSize" Value="18"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource AppTextLightFioletBrush}"></Setter>
 
         <Style.Triggers>
 
