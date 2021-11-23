@@ -4,7 +4,7 @@
                     xmlns:latex="clr-namespace:WpfMath.Controls;assembly=WpfMath">
 
     <Style TargetType="latex:FormulaControl" x:Key="BasicFormula">
-        <Setter Property="Foreground" Value="{StaticResource AppTextVeryLightFioletBrush}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource AppTextWhiteBrush}"></Setter>
 
         <Style.Triggers>
 
@@ -12,7 +12,7 @@
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
                                             To="{StaticResource AppTextLightFioletColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
@@ -25,7 +25,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
-                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
@@ -41,7 +41,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
-                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
@@ -52,7 +52,7 @@
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
                                             To="{StaticResource AppTextLightFioletColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
@@ -67,7 +67,7 @@
     </Style>
 
     <Style TargetType="FlowDocumentPageViewer">
-        <Setter Property="Foreground" Value="{StaticResource AppTextVeryLightFioletBrush}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource AppTextWhiteBrush}"></Setter>
 
         <Style.Triggers>
 
@@ -75,7 +75,7 @@
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
                                             To="{StaticResource AppTextLightFioletColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
@@ -88,7 +88,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
-                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
@@ -104,7 +104,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation From="{StaticResource AppTextLightFioletColor}"
-                                            To="{StaticResource AppTextVeryLightFioletColor}"
+                                            To="{StaticResource AppTextWhiteColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">
                             </ColorAnimation>
@@ -115,7 +115,7 @@
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation From="{StaticResource AppTextVeryLightFioletColor}"
+                            <ColorAnimation From="{StaticResource AppTextWhiteColor}"
                                             To="{StaticResource AppTextLightFioletColor}"
                                             Duration="0:0:0.25"
                                             Storyboard.TargetProperty="Foreground.Color">

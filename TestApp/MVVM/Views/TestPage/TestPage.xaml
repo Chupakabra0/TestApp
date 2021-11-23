@@ -35,6 +35,8 @@
 
             <latex:FormulaControl Style="{StaticResource BasicFormula}" Formula="Q = \pmatrix{1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 }"></latex:FormulaControl>
 
+            <TextBox></TextBox>
+
             <!--<TextBlock Style="{StaticResource Content}">
                 Нехай ОПР вірішила, що природа знаходиться в стані β<Run BaselineAlignment="Subscript">j</Run>.	Який розв’язок α вона обере?
             </TextBlock>-->

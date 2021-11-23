@@ -6,7 +6,8 @@
     <Style TargetType="TextBox">
 
         <Setter Property="Background" Value="{StaticResource AppLightBlueBrush}"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource AppTextVeryLightFioletBrush}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource AppDarkThemeBackgroundBrush}"></Setter>
+        <Setter Property="CaretBrush" Value="{StaticResource AppDarkThemeBackgroundBrush}"></Setter>
 
         <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}"></Setter>
         <Setter Property="FontSize" Value="18"></Setter>
@@ -55,13 +56,8 @@
                         <Storyboard>
                             <ColorAnimation To="{StaticResource AppLightBlueColor}"
                                             Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Background.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppTextVeryLightFioletColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Foreground.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppBlackColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="CaretBrush.Color"></ColorAnimation>
+                                            Storyboard.TargetProperty="Background.Color">
+                            </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>
@@ -70,13 +66,8 @@
                         <Storyboard>
                             <ColorAnimation To="{StaticResource AppTextBlueColor}"
                                             Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Background.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppTextLightWhiteColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Foreground.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppWhiteColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="CaretBrush.Color"></ColorAnimation>
+                                            Storyboard.TargetProperty="Background.Color">
+                            </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
@@ -88,13 +79,8 @@
                         <Storyboard>
                             <ColorAnimation To="{StaticResource AppTextBlueColor}"
                                             Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Background.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppTextLightWhiteColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Foreground.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppWhiteColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="CaretBrush.Color"></ColorAnimation>
+                                            Storyboard.TargetProperty="Background.Color">
+                            </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>
@@ -103,13 +89,8 @@
                         <Storyboard>
                             <ColorAnimation To="{StaticResource AppLightBlueColor}"
                                             Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Background.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppTextVeryLightFioletColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="Foreground.Color"></ColorAnimation>
-                            <ColorAnimation To="{StaticResource AppBlackColor}"
-                                            Duration="0:0:0.25"
-                                            Storyboard.TargetProperty="CaretBrush.Color"></ColorAnimation>
+                                            Storyboard.TargetProperty="Background.Color">
+                            </ColorAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
