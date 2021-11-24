@@ -2,9 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:b="clr-namespace:TestApp.Core.Converters.BooleanToVisibilityConverter"
                     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-                    xmlns:p="clr-namespace:TestApp.Properties">
+                    xmlns:p="clr-namespace:TestApp.Properties"
+                    xmlns:booleanToPathConverter="clr-namespace:TestApp.Core.Converters.BooleanToPathConverter">
 
     <b:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></b:BooleanToVisibilityConverter>
+    <booleanToPathConverter:BooleanToPathConverter x:Key="BooleanToPathConverter"></booleanToPathConverter:BooleanToPathConverter>
 
     <Style TargetType="CheckBox">
 
@@ -36,7 +38,7 @@
 
 
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                                   Width="100" TextWrapping="Wrap"
+                                   Width="800" TextWrapping="Wrap"
                                    Style="{StaticResource BoxText}"
                                    Margin="15, 0, 0, 0">
                                 <ContentPresenter></ContentPresenter>

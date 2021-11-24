@@ -51,6 +51,9 @@
     <Page Update="Resources\Style\Fonts.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Style\GroupBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Style\Image.xaml">
       <SubType>Designer</SubType>
     </Page>
