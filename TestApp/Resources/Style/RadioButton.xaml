@@ -37,7 +37,7 @@
                             </Grid>
 
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                                       Width="100" TextWrapping="Wrap"
+                                       Width="600" TextWrapping="Wrap"
                                        Style="{StaticResource BoxText}"
                                        Margin="15, 0, 0, 0">
                                 <ContentPresenter></ContentPresenter>
