@@ -1,0 +1,892 @@
+﻿{
+  "pulls": [
+    {
+      "name": "Критерій Севіджа",
+      "description": "...",
+      "questions": {
+        "common": [
+          {
+            "id": 1,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Критерій Севіджа відображає психологію якої людини?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"песиміста\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"людини, що сумнівається\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"оптиміста\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"людини, що впевнена\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 2,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Доповніть речення:&quot;За критерієм Севіджа, найкращим розв’язком буде той, … &quot;:\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"якому відповідають найменші втрати\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"якому відповідають найбільші втрати\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"що є найближчим до 1\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"що неможливо передбачити\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 3,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Яка величина використовується у критерії Севіджа?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Text=\"величина оптимальності\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\"  Text=\"величина жалю\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"величина удачі\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"величина імовірності\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 4,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Як визначається величина жалю?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"l_{ij} + \\min_{1 \\leq i \\leq n} l_{ij}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"l_{ij} + \\max_{1 \\leq i \\leq n} l_{ij}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"l_{ij} - \\min_{1 \\leq i \\leq n} l_{ij}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"l_{ij} + \\max_{1 \\leq i \\leq n} l_{ij}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 5,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Доповніть речення: &quot;Згідно з критерієм Севіджа із двох розв’язків кращим є той, …&quot;:\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"який співпадає із обраним з першого разу\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"для якого найбільший можливий жаль є максимальним\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"для якого найменший можливий жаль є максимальним\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"для якого найбільший можливий жаль є мінімальним\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 6,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Як перейти від матриці втрат до матриці жалю?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти у матриці втрат найбільше значення та відняти від нього кожен елемент матриці\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти у матриці втрат найменше значення та відняти його від кожного елементу матриці\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти у матриці втрат найменше значення, та відняти його від кожного елементу відповідного цьому елементу стовпчику, інші стовпчики залишити без змін\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти у матриці втрат в кожному стовпчику найменше значення, та відняти його від кожного елементу даного стовпчику\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 7,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Оберіть правильну матрицю жалю для такої матриці втрат:\"></TextBlock><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"L = \\pmatrix{1 &amp; 1 \\cr 0.2 &amp; 0.6 \\cr 0.9 &amp; 0.4 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"S = \\pmatrix{0.8 &amp; 0.8 \\cr 0 &amp; 0.6 \\cr 0.7 &amp; 0.2 }\" Margin=\"20\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"S = \\pmatrix{0.8 &amp; 0.6 \\cr 0 &amp; 0.2 \\cr 0.7 &amp; 0 }\" Margin=\"20\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"S = \\pmatrix{0.8 &amp; 1 \\cr 0 &amp; 0.6 \\cr 0.7 &amp; 0.4 }\" Margin=\"20\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"S = \\pmatrix{0 &amp; 0 \\cr 0 &amp; 0.6 \\cr 0.7 &amp; 0 }\" Margin=\"20\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 8,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Який з критерієв застосовується до матриці жалю?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"мінімаксний\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"Севіджа\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"оптимізму-песимізму\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"Байєса\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 9,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\">Нехай ОПР вирішила, що природа знаходиться в стані β<Run BaselineAlignment=\"Subscript\">j</Run>.\tЯкий розв’язок α вона обере?</TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"із найбільшими втратами\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"із найменшими втратами\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, який їй сподобається\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, який їй не сподобається\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 10,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"До якої матриці застосовується критерій Севіджа?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"до матриці корисності\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"до матриці жалю\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"до матриці втрат\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"до одиничної матриці\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 11,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Знайти оптимальний нерандомізований розв’язок для наступної матриці втрат:\"></TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"L = \\pmatrix{0 &amp; 0.6 \\cr 0.8 &amp; 0.2 \\cr 0.4 &amp; 0.3 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{S}^{*} = \\alpha_{3}; S^{*} = 0.4\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{S}^{*} = \\alpha_{1}; S^{*} = 0\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{S}^{*} = \\alpha_{1}; S^{*} = 0.4\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{S}^{*} = \\alpha_{1}, \\alpha_{3};  S^{*} = 0.4\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 12,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Оберіть елементи першого рядку матриці втрат для такої матриці корисності:\"></TextBlock><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"Q = \\pmatrix{7 &amp; 2 &amp; 8 \\cr 3 &amp; 9 &amp; 4 \\cr 1 &amp; 6 &amp; 0 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"2, 7, 1\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"5, 0, 6\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"1, 6, 0\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"7, 2, 8\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 13,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Доповніть речення:&quot;За критерієм Севіджа, як кінцевий розв’язок обирається таке α, що...&quot;\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"при неконтрольованому стані природи дає мінімальні втрати\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"при неконтрольованому стані природи дає максимальні втрати\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">відповідає найбільшому M<Run BaselineAlignment=\"Subscript\">s</Run>(α<Run BaselineAlignment=\"Subscript\">i</Run>)</TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">відповідає найменшому M<Run BaselineAlignment=\"Subscript\">s</Run>(α<Run BaselineAlignment=\"Subscript\">i</Run>)</TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 14,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке &quot;платіжна множина&quot;?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"опукла множина, що відповідає нерандомізованим розв’язкам\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"неопукла множина, що відповідає нерандомізованим розв’язкам\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"опукла множина, що відповідає всій множині рандомізованих розв’язків\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"неопукла множина, що відповідає всій множині рандомізованих розв’язків\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 15,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що значить &quot;застосувати мінімаксний критерій до платіжної множини із новими координатами&quot;?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти точку, що є найближчою до осі ординат\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти першу точку перетину платіжної множини із градієнтом\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти першу точку перетину платіжної множини із прямокутним клином\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"знайти точку, що є найближчою до осі абсцис\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 16,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Чому відповідає перехід від матриці втрат до матриці жалю у геометричному сенсі?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"паралельному перенесенню осей координат до їх дотику із платіжною множиною D\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"паралельному перенесенню осі ординат до її дотику із платіжною множиною D\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"паралельному перенесенню осі абсцис до її дотику із платіжною множиною D;\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"паралельному перенесенню осей координат таким способом, щоб вони не мали спільних точок із платіжною множиною D\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 17,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Як будується платіжна множина?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо втрати, відповідні β<Run BaselineAlignment=\"Subscript\">2</Run>, по осі ординат відповідні втрати при β<Run BaselineAlignment=\"Subscript\">1</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо виграші, відповідні β<Run BaselineAlignment=\"Subscript\">2</Run>, по осі ординат відповідні виграші при β<Run BaselineAlignment=\"Subscript\">1</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо сиграші, відповідні β<Run BaselineAlignment=\"Subscript\">1</Run>, по осі ординат відповідні виграші при β<Run BaselineAlignment=\"Subscript\">2</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо втрати, відповідні β<Run BaselineAlignment=\"Subscript\">1</Run>, по осі ординат відповідні втрати при β<Run BaselineAlignment=\"Subscript\">2</Run></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 18,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою умовою критерії оптимальності мають геометричну інтерпретацію?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 1 стані\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 2 станах\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 3 станах\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"певної умови немає\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 19,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке &quot;рандомізований розв'язок&quot;?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей виграшів\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"один або декілька варіантів, які обирає ОПР з імовірністю 100%\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей на множині неоптимізованих розв'язків\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей втрат\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 20,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Який вигляд має рандомізований розв'язок?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, 0, ..., x, 0, 0, ..., 0)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, 0, ..., x, 0, 0, ..., 1 - x, 0, 0, ..., 0)\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(x, 0)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, x)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 21,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке ОПР?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особа, що приймає рішення\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особливість правильного розв’язку\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"оптимальний параметричний розв’язок\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особливість психології рішень\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 22,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Яке з наведених рівнянь нижче потрібно розв'язати за умови, що шукається рандомізований розв'язок за критерієм Севіджа?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"x l'_{i 1} + (1 - x) l'_{j 1} = x l'_{i 2} + (1 - x) l'_{j 2}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"x l'_{i 2} + (1 - x) l'_{j 2} = 0\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"x l'_{i 1} + (1 - x) l'_{j 1} = 0\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl Scale=\"20\" Style=\"{StaticResource BasicFormula}\" Formula=\"x l'_{j 1} + (1 - x) l'_{i 1} = x l'_{i 2} + (1 - x) l'_{j 2}\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            }
+          }
+        ],
+        "multitest": [
+          {
+            "id": 23,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Оберіть правильні твердження:\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"матрицю корисності можна знайти, якщо з кожного елементу матриці втрат відняти найменший елемент\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"матрицю втрат можна знайти, якщо з кожного елементу матриці втрат відняти найменший елемент\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"завжди можна перейти від матриці втрат до матриці корисності\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"завжди можна перейти від матриці корисності до матриці втрат\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          }
+        ],
+        "quiz": [
+          {
+            "id": 24,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\">Нехай маємо матрицю S. Знайдіть, чому дорівнює S<Run BaselineAlignment=\"TextTop\">*</Run>, якщо матриця S має наступний вигляд:</TextBlock><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"Q = \\pmatrix{7 &amp; 2 &amp; 8 \\cr 3 &amp; 9 &amp; 4 \\cr 1 &amp; 6 &amp; 0 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "answer": "4"
+          },
+          {
+            "id": 25,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\">Нехай маємо матрицю S. Знайдіть (вкажіть номер), чому дорівнює α<Run BaselineAlignment=\"TextTop\">*</Run>, якщо матриця S має наступний вигляд:</TextBlock><Controls:FormulaControl Style=\"{StaticResource BasicFormula}\" HorizontalAlignment=\"Center\" Formula=\"Q = \\pmatrix{7 &amp; 2 &amp; 8 \\cr 3 &amp; 9 &amp; 4 \\cr 1 &amp; 6 &amp; 0 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "answer": "2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Критерій Неймана-Пірсона",
+      "description": "...",
+      "questions": {
+        "common": [
+          {
+            "id": 26,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Коли застосовують критерій Неймана-Пірсона?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"коли природа може знаходитись тільки у двох станах, при чому один із них вважається контрольованим\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"коли відомий розподіл імовірностей на множині станів природи\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"коли природа може знаходитись у деякій кількості станів, при чому один із них вважається контрольованим\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"коли природа може знаходитись тільки у двох станах, при чому вони є контрольованими\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 28,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Які розв’язки вилучаються із розгляду, при використанні критерія Неймана-Пірсона?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ті, що при контрольованому стані менші ніж порогове значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ті, що при контрольованому стані більші ніж порогове значення\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ті, що при неконтрольованому стані менші ніж порогове значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ті, що при неконтрольованому стані більші ніж порогове значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 29,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Згідно з критерієм Неймана-Пірсона, який розв'язок з двох вважається найкращим?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, для якого втрати для стану, що контролюється, більші\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, для якого втрати для стану, що не контролюється, більші\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, для якого втрати для стану, що контролюється, менші\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"той, для якого втрати для стану, що не контролюється, менші\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 30,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке ОПР?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особливість правильного розв’язку\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особливість психології рішень\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"оптимальний параметричний розв’язок\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"особа, що приймає рішення\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 31,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке &quot;платіжна множина&quot;?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"опукла множина, що відповідає нерандомізованим розв’язкам\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"неопукла множина, що відповідає нерандомізованим розв’язкам\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"неопукла множина, що відповідає всій множині рандомізованих розв’язків\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"опукла множина, що відповідає всій множині рандомізованих розв’язків\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 32,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Як будується платіжна множина?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо втрати, відповідні β<Run BaselineAlignment=\"Subscript\">2</Run>, по осі ординат відповідні втрати при β<Run BaselineAlignment=\"Subscript\">1</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо виграші, відповідні β<Run BaselineAlignment=\"Subscript\">2</Run>, по осі ординат відповідні виграші при β<Run BaselineAlignment=\"Subscript\">1</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо сиграші, відповідні β<Run BaselineAlignment=\"Subscript\">1</Run>, по осі ординат відповідні виграші при β<Run BaselineAlignment=\"Subscript\">2</Run></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\">По осі абсцис відкладаємо втрати, відповідні β<Run BaselineAlignment=\"Subscript\">1</Run>, по осі ординат відповідні втрати при β<Run BaselineAlignment=\"Subscript\">2</Run></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 33,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою умовою критерії оптимальності мають геометричну інтерпретацію?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 1 стані\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 2 станах\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"природа може знаходитись тільки у 3 станах\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"певної умови немає\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 34,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Що таке &quot;рандомізований розв'язок&quot;?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей виграшів\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"один або декілька варіантів, які обирає ОПР з імовірністю 100%\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей на множині неоптимізованих розв'язків\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"розподіл імовірностей втрат\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 35,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Який вигляд має рандомізований розв'язок?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, 0, ..., x, 0, 0, ..., 1 - x, 0, 0, ..., 0)\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, 0, ..., x, 0, 0, ..., 0)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(x, 0)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"(0, x)\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 36,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За геометричною інтерпретацією критерія Неймана-Пірсона, які розв'язки виключаються із платіжної множини?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"значення яких за контрольованим станом більші за задане граничне значення\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"значення яких за неконтрольованим станом більші за задане граничне значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"значення яких за контрольованим станом менші за задане граничне значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"значення яких за не контрольованим станом менщі за задане граничне значення\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 37,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За критерієм Неймана-Пірсона, після виключення зайвих точок із платіжної множини, яку точку обирають??\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ту, для якої значення за станом, що контролюється, найменше\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ту, для якої значення за станом, що не контролюється, найменше\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ту, для якої значення за станом, що не контролюється, найбільше\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ту, для якої значення за станом, що контролюється, найбільше\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 39,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Яким буде оптимальний розв’язок для матриці втрат, яка задана нижче, якщо відомо, що другий стан контролюється, а порогове значення дорівнює 0.7?\"></TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"L = \\pmatrix{0 &amp; 1 \\cr 0.1 &amp; 0.6 \\cr 0.9 &amp; 0.5 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{N-P}^{*} = \\alpha_{2}; L^{*} = 0.1\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{N-P}^{*} = \\alpha_{1}; L^{*} = 1\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{N-P}^{*} = \\alpha_{1}; L^{*} = 0\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"\\alpha_{N-P}^{*} = \\alpha_{3};  L^{*} = 0.5\" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 40,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Маємо матрицю корисності Q. Перший стан є контрольованим, а порогове значення дорівнює 6. Який рядок буде викреслено, якщо матриця Q має вигляд:\"></TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"Q = \\pmatrix{7 &amp; 2 \\cr 4 &amp; 3 \\cr 5 &amp; 0 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"першу\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"другу\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"третю\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ніяку\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          }
+        ],
+        "multitest": [
+          {
+            "id": 27,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Щоби використати критерій Неймана-Пірсона, що має бути задано, окрім матриці втрат?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"імовірність\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"порогове значення втрат\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"порогове значення виграшів\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"контрольований стан\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 38,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Оберіть правильні твердження:\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"матрицю корисності можна знайти, якщо з кожного елементу матриці втрат відняти найменший елемент\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"матрицю втрат можна знайти, якщо з кожного елементу матриці втрат відняти найменший елемент\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"завжди можна перейти від матриці втрат до матриці корисності\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"завжди можна перейти від матриці корисності до матриці втрат\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            }
+          },
+          {
+            "id": 43,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Маємо матрицю втрат L. Другий стан є контрольованим, а порогове значення дорівнює 0.7. Який рядок вбо рядки будуть викреслені, якщо матриця L має вигляд:\"></TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"L = \\pmatrix{0 &amp; 1 \\cr 0.1 &amp; 0.6 \\cr 0.9 &amp; 0.5 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"першу\"></TextBlock></StackPanel>",
+              "isCorrect": true
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"другу\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"третю\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource BoxText}\" Text=\"ніяку\"></TextBlock></StackPanel>",
+              "isCorrect": false
+            }
+          },
+          {
+            "id": 44,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою формулою можна знайти значення точки, що відповідає розв’язку в алгоритмі пошуку рандомізованого розв'язку за критерієм Неймана-Пірсона?\"></TextBlock></StackPanel>",
+            "explanation": "TODO",
+            "variantA": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"x_{i} \\pmatrix{ l_{i 1} \\cr l_{i 2} } - (1 - x_{i}) \\pmatrix{ l_{j 1} \\cr l_{j 2} } = \\pmatrix{ L_{1} \\cr L_{2} } \" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantB": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"x_{i} \\pmatrix{ l_{i 1} \\cr l_{i 2} } + (1 - x_{i}) \\pmatrix{ l_{j 1} \\cr l_{j 2} } = \\pmatrix{ L_{1} \\cr L_{2} } \" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": true
+            },
+            "variantC": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"(1 - x_{i}) \\pmatrix{ l_{j 1} \\cr l_{j 2} } - x_{i} \\pmatrix{ l_{i 1} \\cr l_{i 2} } = \\pmatrix{ L_{1} \\cr L_{2} } \" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            },
+            "variantD": {
+              "text": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"x_{i} \\pmatrix{ l_{i 1} \\cr l_{i 2} } + (1 - x_{i}) \\pmatrix{ l_{j 1} \\cr l_{j 2} } = 0 \" Margin=\"0\" Scale=\"20\"></Controls:FormulaControl></StackPanel>",
+              "isCorrect": false
+            }
+          }
+        ],
+        "quiz": [
+          {
+            "id": 41,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"Маємо матрицю корисності Q. Перший стан є контрольованим, а порогове значення дорівнює 6. Знайдіть оптимальний розв'язок, якщо матриця Q має вигляд:\"></TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"Q = \\pmatrix{7 &amp; 2 \\cr 4 &amp; 3 \\cr 5 &amp; 0 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "answer": "4"
+          },
+          {
+            "id": 42,
+            "description": "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\">Маємо матрицю втрат L. Перший стан є контрольованим, а порогове значення дорівнює 7. Знайдіть (вкажіть номер) α<Run BaselineAlignment=\"TextTop\">*</Run> якщо матриця L має вигляд:</TextBlock><Controls:FormulaControl HorizontalAlignment=\"Center\" Style=\"{StaticResource BasicFormula}\" Formula=\"L = \\pmatrix{3 &amp; 6 \\cr 8 &amp; 0 \\cr 5 &amp; 4 }\" Margin=\"20\" Scale=\"25\"></Controls:FormulaControl></StackPanel>",
+            "explanation": "TODO",
+            "answer": "3"
+          }
+        ]
+      }
+    }
+  ]
+}
