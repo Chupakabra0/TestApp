@@ -5,7 +5,7 @@
     <!-- LOGO IMAGE -->
     <Style TargetType="Image" x:Key="LogoImage">
 
-        <Setter Property="Source" Value="pack://application:,,,/Resources/Icons/free-icon-math-book-dark-theme.png"></Setter>
+        <Setter Property="Source" Value="pack://application:,,,/Resources/Icons/free-icon-math-book-light-theme.png"></Setter>
 
         <Style.Triggers>
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">

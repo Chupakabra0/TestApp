@@ -7,7 +7,8 @@
         xmlns:homeviewmodel="clr-namespace:TestApp.MVVM.ViewModels.MainViewModel"
         xmlns:p="clr-namespace:TestApp.Properties"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Decision Theory"
+        Icon="pack://application:,,,/Resources/Icons/free-icon-math-book-light-theme.png"
         ResizeMode="CanMinimize"
         Background="Transparent"
         Height="665" Width="1200">
@@ -108,7 +109,7 @@
                     </Image>
 
                     <!-- Logo text -->
-                    <TextBlock Text="Desicion&#xa;Theory"
+                    <TextBlock Text="Decision&#xa;Theory"
                                FontFamily="{StaticResource PoppinsMedium}"
                                FontSize="15"
                                Margin="6, 5, 0, 0"
