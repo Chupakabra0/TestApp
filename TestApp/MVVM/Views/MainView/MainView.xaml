@@ -487,18 +487,18 @@
 
                 </Grid>
 
-                <!-- FILLER -->
+                <!-- FILLER --><!--
                 <UniformGrid Grid.Row="1">
 
 
-                </UniformGrid>
+                </UniformGrid>-->
 
             </Grid>
 
             <!-- CONTENT PRESENTER -->
             <UniformGrid Grid.Row="1" Grid.Column="2"
                          Margin="25">
-                <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                               VerticalScrollBarVisibility="Auto">
                     <Frame Content="{Binding Path=CurrentView}"
                        NavigationUIVisibility="Hidden"></Frame>
