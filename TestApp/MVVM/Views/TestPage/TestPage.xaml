@@ -299,6 +299,13 @@
                 </StackPanel>
             </Label>
 
+            <Button HorizontalAlignment="Center"
+                    Margin="20"
+                    Style="{StaticResource BasicButton}"
+                    Content="Відповісти"
+                    Command="{Binding}">
+            </Button>
+
         </StackPanel>
 
     </StackPanel>

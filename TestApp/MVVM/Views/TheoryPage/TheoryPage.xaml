@@ -60,8 +60,8 @@
                 </FlowDocumentPageViewer.Template>
             </FlowDocumentPageViewer>
 
-            <Button Margin="30, 10"
-                    Content="Тест" HorizontalAlignment="Right"
+            <Button Margin="20"
+                    Content="Тест" HorizontalAlignment="Center"
                     Style="{StaticResource BasicButton}">
             </Button>
 
