@@ -1,4 +1,5 @@
 ﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
@@ -13,6 +14,10 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.obj_common = this.repository.GetSavageCommonTest();
             this.obj_multitest = this.repository.GetSavageMultitestTest();
             this.obj_quiz = this.repository.GetSavageQuizTest();
+
+            MixCommon();
+            MixMultiTest();
+            MixQuiz();
 
             this.test1 = new Test(obj_common[0]);
             this.test2 = new Test(obj_common[1]);
@@ -51,7 +56,53 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public bool IsMenuEnabled  => !this.IsTestChosen;
         public IQuestionRepository repository = new JsonQuestionRepository("test.json");
 
+#region [SHUFFLE]
+        public List<int> rand_common = new List<int>();
+        public List<int> rand_multitest = new List<int>();
+        public List<int> rand_quiz = new List<int>();
 
+        public void MixCommon()
+        {
+            Random random = new Random();
+            int j = 0;
+            for (int i = this.obj_common.Count - 1; i >= 1; i--)
+            {
+                j = random.Next(i + 1);
+                rand_common.Add(j);
+                var tmp = this.obj_common[j];
+                this.obj_common[j] = this.obj_common[i];
+                this.obj_common[i] = tmp;
+            }
+        }
+        public void MixMultiTest()
+        {
+            Random random = new Random();
+            int j = 0;
+            for (int i = this.obj_multitest.Count - 1; i >= 1; i--)
+            {
+                j = random.Next(i + 1);
+                rand_multitest.Add(j);
+                var tmp = this.obj_multitest[j];
+                this.obj_multitest[j] = this.obj_multitest[i];
+                this.obj_multitest[i] = tmp;
+            }
+        }
+        public void MixQuiz()
+        {
+            Random random = new Random();
+            int j = 0;
+            for (int i = this.obj_quiz.Count - 1; i >= 1; i--)
+            {
+                j = random.Next(i + 1);
+                rand_quiz.Add(j);
+                var tmp = this.obj_quiz[j];
+                this.obj_quiz[j] = this.obj_quiz[i];
+                this.obj_quiz[i] = tmp;
+            }
+        }
+        #endregion
+
+#region [TESTS]
         //--------------------- TESTS -----------------------------//
         public List<Common> obj_common { get; set; }
         public List<Multitest> obj_multitest { get; set; }
@@ -66,8 +117,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
 
 
-    private string desc_1 =
-            "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою формулою можна знайти значення точки, що відповідає розв’язку в алгоритмі пошуку рандомізованого розв'язку за критерієм Неймана-Пірсона?\"></TextBlock></StackPanel>";
+        private string desc_1 =
+                "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою формулою можна знайти значення точки, що відповідає розв’язку в алгоритмі пошуку рандомізованого розв'язку за критерієм Неймана-Пірсона?\"></TextBlock></StackPanel>";
         public object RB_Desc_1 => XamlReader.Parse(this.desc_1);
 
         private string a1_content =
@@ -90,6 +141,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public object RB_d1_Content => XamlReader.Parse(this.d1_content);
         public bool RB_d1_Checked { get; set; }
 
+
         public bool CheckMark_1 => this.RB_d1_Checked;
 
         //--------------------- MULTITESTS -----------------------------//
@@ -102,6 +154,6 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public Test test10 { get; set; }
         public Test test11 { get; set; }
         public Test test12 { get; set; }
-
+#endregion
     }
 }
