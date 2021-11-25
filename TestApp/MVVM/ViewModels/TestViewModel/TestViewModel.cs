@@ -11,6 +11,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
     public class TestViewModel : BaseViewModel.BaseViewModel {
         public TestViewModel() {
             this.obj_common = this.repository.GetSavageCommonTest();
+            this.obj_multitest = this.repository.GetSavageMultitestTest();
+            this.obj_quiz = this.repository.GetSavageQuizTest();
 
             this.test1 = new Test(obj_common[0]);
             this.test2 = new Test(obj_common[1]);
@@ -18,6 +20,14 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.test4 = new Test(obj_common[3]);
             this.test5 = new Test(obj_common[4]);
             this.test6 = new Test(obj_common[5]);
+
+            this.test7 = new Test(obj_multitest[0]);
+            this.test8 = new Test(obj_multitest[1]);
+            this.test9 = new Test(obj_multitest[2]);
+
+            this.test10 = new Test(obj_quiz[0]);
+            this.test11 = new Test(obj_quiz[1]);
+            this.test12 = new Test(obj_quiz[2]);
         }
 
         public ICommand OpenSavageCommand =>
@@ -44,6 +54,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         //--------------------- TESTS -----------------------------//
         public List<Common> obj_common { get; set; }
+        public List<Multitest> obj_multitest { get; set; }
+        public List<Quiz> obj_quiz { get; set; }
 
         public Test test1 { get; set; }
         public Test test2 { get; set; }
