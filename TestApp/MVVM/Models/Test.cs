@@ -22,7 +22,7 @@ namespace Models
         {
             id = test.id;
             description = XamlReader.Parse(test.description);
-            explanation = XamlReader.Parse(test.explanation);
+            explanation = test.explanation;
             variantA = XamlReader.Parse(test.variantA.text);
             variantB = XamlReader.Parse(test.variantB.text);
             variantC = XamlReader.Parse(test.variantC.text);
@@ -32,7 +32,7 @@ namespace Models
         {
             id = test.id;
             description = XamlReader.Parse(test.description);
-            explanation = XamlReader.Parse(test.explanation);
+            explanation = test.explanation;
             answer = test.answer;
         }
         public int id { get; set; }
