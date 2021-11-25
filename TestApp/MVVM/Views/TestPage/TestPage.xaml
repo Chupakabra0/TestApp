@@ -86,15 +86,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test2.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -107,15 +107,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test3.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -128,15 +128,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test4.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -149,15 +149,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test5.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -170,15 +170,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test6.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -191,15 +191,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test7.description}"></Label>
                     </StackPanel>
 
                     <!--<GroupBox>-->
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
                         </StackPanel>
                     <!--</GroupBox>-->
                 </StackPanel>
@@ -212,15 +212,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test8.description}"></Label>
                     </StackPanel>
 
                     <!--<GroupBox>-->
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
                         </StackPanel>
                     <!--</GroupBox>-->
                 </StackPanel>
@@ -233,15 +233,15 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test9.description}"></Label>
                     </StackPanel>
 
                     <!--<GroupBox>-->
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
                         </StackPanel>
                     <!--</GroupBox>-->
                 </StackPanel>
@@ -254,7 +254,7 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test10.description}"></Label>
                     </StackPanel>
 
                     <TextBox HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
@@ -277,7 +277,7 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test11.description}"></Label>
                     </StackPanel>
 
                     <TextBox HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
@@ -301,7 +301,7 @@
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                        <Label Content="{Binding RB_Desc_1}"></Label>
+                        <Label Content="{Binding test12.description}"></Label>
                     </StackPanel>
 
                     <TextBox HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
