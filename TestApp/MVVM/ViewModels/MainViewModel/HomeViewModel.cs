@@ -20,21 +20,27 @@ namespace TestApp.MVVM.ViewModels.MainViewModel {
         public ICommand Command_settings => new RelayCommand(this.Open_settings_page);
 
         private Page TheoryPage = new BlankPage();
+        private Page HomePage = new HomePage();
+        private Page TestPage = new TestPage();
+        private Page SettingsPage = new SettingsPage();
 
+        #region [ OPEN PAGES ]
         void Open_home_page()
         {
-            this.CurrentView = new HomePage();
+            this.CurrentView = this.HomePage;
         }
         void Open_test_page()
         {
-            this.CurrentView = new TestPage();
+            this.CurrentView = this.TestPage;
         }
-        void Open_theory_page() {
+        void Open_theory_page()
+        {
             this.CurrentView = this.TheoryPage;
         }
         void Open_settings_page()
         {
-            this.CurrentView = new SettingsPage();
+            this.CurrentView = this.SettingsPage;
         }
+        #endregion
     }
 }

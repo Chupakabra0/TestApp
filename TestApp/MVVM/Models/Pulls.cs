@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Models
 {
-    class Question
+    public class Question
     {
         public Question(Common c, Multitest m, Quiz q)
         {
@@ -29,11 +29,11 @@ namespace ConsoleApp2
 
 
     }
-    class Pulls
+    public class Pulls
     {
         public List<Pull> pulls { get; set; }
     }
-    class Pull
+    public class Pull
     {
         public Pull()
         {

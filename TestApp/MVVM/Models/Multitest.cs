@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Models
 {
-    class Multitest: ITest
+    public class Multitest: ITest
     {
         [JsonProperty("id")]
         public int id { get; set; }

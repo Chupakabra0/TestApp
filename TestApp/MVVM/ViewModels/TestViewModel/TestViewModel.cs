@@ -1,13 +1,23 @@
-﻿using System.Windows;
+﻿using Models;
+using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
 using TestApp.Core.Commands.RelayCommand;
-using TestLibrary;
+using TestApp.Core.Repository.Question;
+//using TestLibrary;
 
 namespace TestApp.MVVM.ViewModels.TestViewModel {
     public class TestViewModel : BaseViewModel.BaseViewModel {
         public TestViewModel() {
+            this.obj_common = this.repository.GetSavageCommonTest();
 
+            this.test1 = new Test(obj_common[0]);
+            this.test2 = new Test(obj_common[1]);
+            this.test3 = new Test(obj_common[2]);
+            this.test4 = new Test(obj_common[3]);
+            this.test5 = new Test(obj_common[4]);
+            this.test6 = new Test(obj_common[5]);
         }
 
         public ICommand OpenSavageCommand =>
@@ -29,10 +39,22 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public bool IsTestChosen      { get; set; }
         public bool IsMenuEnabled  => !this.IsTestChosen;
+        public IQuestionRepository repository = new JsonQuestionRepository("test.json");
+
 
         //--------------------- TESTS -----------------------------//
+        public List<Common> obj_common { get; set; }
 
-        private string desc_1 =
+        public Test test1 { get; set; }
+        public Test test2 { get; set; }
+        public Test test3 { get; set; }
+        public Test test4 { get; set; }
+        public Test test5 { get; set; }
+        public Test test6 { get; set; }
+
+
+
+    private string desc_1 =
             "<StackPanel xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:Controls=\"clr-namespace:WpfMath.Controls;assembly=WpfMath\"><TextBlock Style=\"{StaticResource Content}\" Text=\"За якою формулою можна знайти значення точки, що відповідає розв’язку в алгоритмі пошуку рандомізованого розв'язку за критерієм Неймана-Пірсона?\"></TextBlock></StackPanel>";
         public object RB_Desc_1 => XamlReader.Parse(this.desc_1);
 
@@ -59,11 +81,15 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public bool CheckMark_1 => this.RB_d1_Checked;
 
         //--------------------- MULTITESTS -----------------------------//
-
+        public Test test7 { get; set; }
+        public Test test8 { get; set; }
+        public Test test9 { get; set; }
 
 
         //--------------------- QUESTION -----------------------------//
-
+        public Test test10 { get; set; }
+        public Test test11 { get; set; }
+        public Test test12 { get; set; }
 
     }
 }
