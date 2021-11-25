@@ -65,15 +65,15 @@
                                Margin="0, 0, 10, 0"
                                Content="{Binding CheckMark_1, Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}">
                         </Label>
-                         <Label Content="{Binding RB_Desc_1}"></Label>
+                         <Label Content="{Binding test1.description}"></Label>
                     </StackPanel>
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
