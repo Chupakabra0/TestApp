@@ -171,6 +171,13 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                     this.NumberOfCorrect++;
                     AhShitHereWeGoAgain[i] = true;
                 }
+                else
+                {
+                    this.bools[i].Item1 = obj_common[i].variantA.isCorrect;
+                    this.bools[i].Item2 = obj_common[i].variantB.isCorrect;
+                    this.bools[i].Item3 = obj_common[i].variantC.isCorrect;
+                    this.bools[i].Item4 = obj_common[i].variantD.isCorrect;
+                }
             }
             for (int j = 0; j < 3; j++, i++)
             {
@@ -179,6 +186,13 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                     this.NumberOfCorrect++;
                     AhShitHereWeGoAgain[i] = true;
                 }
+                else
+                {
+                    this.bools[i].Item1 = obj_multitest[j].variantA.isCorrect;
+                    this.bools[i].Item2 = obj_multitest[j].variantB.isCorrect;
+                    this.bools[i].Item3 = obj_multitest[j].variantC.isCorrect;
+                    this.bools[i].Item4 = obj_multitest[j].variantD.isCorrect;
+                }
             }
             for (int j = 0; j < answers.Count; j++, i++)
             {
@@ -186,6 +200,10 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 {
                     this.NumberOfCorrect++;
                     AhShitHereWeGoAgain[i] = true;
+                }
+                else
+                {
+                    this.answers[j] = obj_quiz[j].answer;
                 }
             }
         }
