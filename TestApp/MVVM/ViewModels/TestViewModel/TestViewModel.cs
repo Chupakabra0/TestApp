@@ -18,7 +18,9 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.obj_quiz = this.repository.GetSavageQuizTest();
             this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
             this.answers = new ObservableCollection<string>();
-            for(var i = 0; i < 9; i++)
+            this.AhShitHereWeGoAgain = new ObservableCollection<bool>();
+
+            for (var i = 0; i < 9; i++)
             {
                 this.bools.Add(new Quadro<bool, bool, bool, bool>(false, false, false, false));
             }
@@ -26,8 +28,16 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             {
                 this.answers.Add(" ");
             }
+
             this.NumberOfTests = bools.Count + answers.Count;
             this.IsTestComplete = false;
+
+            for (var i = 0; i < NumberOfTests; i++)
+            {
+                this.AhShitHereWeGoAgain.Add(false);
+            }
+
+
             MixCommon();
             MixMultiTest();
             MixQuiz();
@@ -159,6 +169,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 if (bools[i].Item1 == obj_common[i].variantA.isCorrect && bools[i].Item2 == obj_common[i].variantB.isCorrect && bools[i].Item3 == obj_common[i].variantC.isCorrect && bools[i].Item4 == obj_common[i].variantD.isCorrect)
                 {
                     this.NumberOfCorrect++;
+                    AhShitHereWeGoAgain[i] = true;
                 }
             }
             for (int j = 0; j < 3; j++, i++)
@@ -166,20 +177,23 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 if (bools[i].Item1 == obj_multitest[j].variantA.isCorrect && bools[i].Item2 == obj_multitest[j].variantB.isCorrect && bools[i].Item3 == obj_multitest[j].variantC.isCorrect && bools[i].Item4 == obj_multitest[j].variantD.isCorrect)
                 {
                     this.NumberOfCorrect++;
+                    AhShitHereWeGoAgain[i] = true;
                 }
             }
-            for (int j = 0; j < answers.Count; j++)
+            for (int j = 0; j < answers.Count; j++, i++)
             {
                 if(answers[j] == obj_quiz[j].answer)
                 {
                     this.NumberOfCorrect++;
+                    AhShitHereWeGoAgain[i] = true;
                 }
             }
         }
         public int NumberOfCorrect { get; set; }
         public int NumberOfTests { get; set; }
+        public ObservableCollection<bool> AhShitHereWeGoAgain { get; set; }
         public ObservableCollection<Quadro<bool,bool,bool,bool>> bools { get; set; }
-        public ObservableCollection<string> answers;
+        public ObservableCollection<string> answers { get; set; }
 #endregion
     }
 }
