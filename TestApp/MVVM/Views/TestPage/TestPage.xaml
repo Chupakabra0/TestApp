@@ -331,7 +331,7 @@
                     Margin="20"
                     Style="{StaticResource BasicButton}"
                     Content="Відповісти"
-                    Command="{Binding}">
+                    Command="{Binding SendResultCommand}">
             </Button>
 
         </StackPanel>

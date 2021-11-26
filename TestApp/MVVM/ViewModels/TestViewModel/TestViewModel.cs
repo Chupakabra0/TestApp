@@ -1,10 +1,12 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
 using TestApp.Core.Commands.RelayCommand;
+using TestApp.Core.Quadro;
 using TestApp.Core.Repository.Question;
 //using TestLibrary;
 
@@ -14,7 +16,18 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.obj_common = this.repository.GetSavageCommonTest();
             this.obj_multitest = this.repository.GetSavageMultitestTest();
             this.obj_quiz = this.repository.GetSavageQuizTest();
-
+            this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
+            this.answers = new ObservableCollection<string>();
+            for(var i = 0; i < 9; i++)
+            {
+                this.bools.Add(new Quadro<bool, bool, bool, bool>(false, false, false, false));
+            }
+            for (var i = 0; i < 3; i++)
+            {
+                this.answers.Add(" ");
+            }
+            this.NumberOfTests = bools.Count + answers.Count;
+            this.IsTestComplete = false;
             MixCommon();
             MixMultiTest();
             MixQuiz();
@@ -52,8 +65,15 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 this.IsTestChosen = false;
             });
 
+        public ICommand SendResultCommand =>
+            new RelayCommand(() => {
+                ValidationTest();
+                this.IsTestComplete = true;
+            });
+
         public bool IsTestChosen      { get; set; }
         public bool IsMenuEnabled  => !this.IsTestChosen;
+        public bool IsTestComplete    { get; set; }
         public IQuestionRepository repository = new JsonQuestionRepository("test.json");
 
 #region [SHUFFLE]
@@ -129,6 +149,37 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         #endregion
 
-        public List<Tuple<bool, bool, bool, bool>> bools;
+#region [VALIDATION]
+        public void ValidationTest()
+        {
+            int i;
+            this.NumberOfCorrect = 0;
+            for(i = 0; i < 6; i++)
+            {
+                if (bools[i].Item1 == obj_common[i].variantA.isCorrect && bools[i].Item2 == obj_common[i].variantB.isCorrect && bools[i].Item3 == obj_common[i].variantC.isCorrect && bools[i].Item4 == obj_common[i].variantD.isCorrect)
+                {
+                    this.NumberOfCorrect++;
+                }
+            }
+            for (int j = 0; j < 3; j++, i++)
+            {
+                if (bools[i].Item1 == obj_multitest[j].variantA.isCorrect && bools[i].Item2 == obj_multitest[j].variantB.isCorrect && bools[i].Item3 == obj_multitest[j].variantC.isCorrect && bools[i].Item4 == obj_multitest[j].variantD.isCorrect)
+                {
+                    this.NumberOfCorrect++;
+                }
+            }
+            for (int j = 0; j < answers.Count; j++)
+            {
+                if(answers[j] == obj_quiz[j].answer)
+                {
+                    this.NumberOfCorrect++;
+                }
+            }
+        }
+        public int NumberOfCorrect { get; set; }
+        public int NumberOfTests { get; set; }
+        public ObservableCollection<Quadro<bool,bool,bool,bool>> bools { get; set; }
+        public ObservableCollection<string> answers;
+#endregion
     }
 }
