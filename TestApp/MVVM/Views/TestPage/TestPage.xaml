@@ -98,10 +98,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test1.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test1.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test1.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test1.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantA}" IsChecked="{Binding bools[0].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantB}" IsChecked="{Binding bools[0].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantC}" IsChecked="{Binding bools[0].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantD}" IsChecked="{Binding bools[0].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -119,10 +119,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test2.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test2.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test2.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test2.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantA}" IsChecked="{Binding bools[1].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantB}" IsChecked="{Binding bools[1].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantC}" IsChecked="{Binding bools[1].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantD}" IsChecked="{Binding bools[1].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -140,10 +140,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test3.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test3.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test3.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test3.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantA}" IsChecked="{Binding bools[2].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantB}" IsChecked="{Binding bools[2].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantC}" IsChecked="{Binding bools[2].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantD}" IsChecked="{Binding bools[2].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -161,10 +161,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test4.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test4.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test4.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test4.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantA}" IsChecked="{Binding bools[3].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantB}" IsChecked="{Binding bools[3].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantC}" IsChecked="{Binding bools[3].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantD}" IsChecked="{Binding bools[3].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -182,10 +182,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test5.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test5.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test5.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test5.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantA}" IsChecked="{Binding bools[4].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantB}" IsChecked="{Binding bools[4].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantC}" IsChecked="{Binding bools[4].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantD}" IsChecked="{Binding bools[4].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -203,10 +203,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <RadioButton Content="{Binding test6.variantA}" IsChecked="{Binding RB_a1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test6.variantB}" IsChecked="{Binding RB_b1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test6.variantC}" IsChecked="{Binding RB_c1_Checked}"></RadioButton>
-                            <RadioButton Content="{Binding test6.variantD}" IsChecked="{Binding RB_d1_Checked}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantA}" IsChecked="{Binding bools[5].Item1}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantB}" IsChecked="{Binding bools[5].Item2}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantC}" IsChecked="{Binding bools[5].Item3}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantD}" IsChecked="{Binding bools[5].Item4}"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -224,10 +224,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding test7.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test7.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test7.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test7.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantA}" IsChecked="{Binding bools[6].Item1}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantB}" IsChecked="{Binding bools[6].Item2}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantC}" IsChecked="{Binding bools[6].Item3}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantD}" IsChecked="{Binding bools[6].Item4}"></CheckBox>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -245,10 +245,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding test8.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test8.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test8.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test8.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantA}" IsChecked="{Binding bools[7].Item1}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantB}" IsChecked="{Binding bools[7].Item2}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantC}" IsChecked="{Binding bools[7].Item3}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantD}" IsChecked="{Binding bools[7].Item4}"></CheckBox>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -266,10 +266,10 @@
 
                     <GroupBox>
                         <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding test9.variantA}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test9.variantB}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test9.variantC}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding test9.variantD}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantA}" IsChecked="{Binding bools[8].Item1}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantB}" IsChecked="{Binding bools[8].Item2}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantC}" IsChecked="{Binding bools[8].Item3}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantD}" IsChecked="{Binding bools[8].Item4}"></CheckBox>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
