@@ -8,7 +8,7 @@
       xmlns:Controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
       xmlns:p="clr-namespace:TestApp.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="TestPage">
 
     <Page.DataContext>
@@ -46,15 +46,43 @@
         <StackPanel Orientation="Vertical"
                     Visibility="{Binding IsTestChosen, Converter={StaticResource BooleanToVisibilityConverter}}"
                     Margin="20, 0"
-                    Width="950">
+                    Width="900">
+
+            <!-- HEADER OF TESTS -->
+
+            <Grid Margin="0, 10" Background="Transparent" Width="950">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        Content="Назад" FontSize="18"
+                        Style="{StaticResource RoundButton}"
+                        Command="{Binding BackCommand}">
+                </Button>
+                <UniformGrid Grid.Column="1"></UniformGrid>
+                <TextBlock HorizontalAlignment="Left"
+                           Margin="0, 0, 100, 0"
+                           Grid.Column="2" Text="Binding HeaderText"
+                           Style="{StaticResource Header}">
+                </TextBlock>
+            </Grid>
+
+            <!-- RESULTS -->
+
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0, 10"
+                        Visibility="Visible">
+                <TextBlock Style="{StaticResource Header}">
+                    Ваш результат <Run Text="0"></Run>/<Run Text="12"></Run>. <Run Text="Вітаю!"></Run>
+                </TextBlock>
+            </StackPanel>
 
             <!-- COMMON TESTS -->
-
-            <Button Margin="0, 10" Content="Назад"
-                    HorizontalAlignment="Left" FontSize="18"
-                    Style="{StaticResource RoundButton}"
-                    Command="{Binding BackCommand}">
-            </Button>
 
             <!-- FIRST TEST -->
             <Label>
