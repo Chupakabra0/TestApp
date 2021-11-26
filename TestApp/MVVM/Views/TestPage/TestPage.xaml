@@ -5,15 +5,352 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestApp.MVVM.Views.TestPage"
       xmlns:testviewmodel="clr-namespace:TestApp.MVVM.ViewModels.TestViewModel"
+      xmlns:Controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+      xmlns:p="clr-namespace:TestApp.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="TestPage">
 
     <Page.DataContext>
         <testviewmodel:TestViewModel></testviewmodel:TestViewModel>
     </Page.DataContext>
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+    <StackPanel Orientation="Vertical">
+
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsMenuEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+            <Button Margin="20"
+                    Content="Тест з теми &quot;Критерій Севіджа&quot;"
+                    Style="{StaticResource BigTestButton}"
+                    Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                    Command="{Binding OpenSavageCommand}">
+            </Button>
+
+            <Button Margin="20"
+                    Content="Тест з теми &quot;Критерій Неймана-Пірсона&quot;"
+                    Style="{StaticResource BigTestButton}"
+                    Tag="pack://application:,,,/Resources/Icons/m1-image.png"
+                    Command="{Binding OpenPearsonCommand}">
+            </Button>
+
+            <!--<Controls:FormulaControl Style="{StaticResource BasicFormula}" Formula="Q = \pmatrix{1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 }"></Controls:FormulaControl>
+
+            <TextBox></TextBox>-->
+
+            <!--<TextBlock Style="{StaticResource Content}">
+                Нехай ОПР вірішила, що природа знаходиться в стані β<Run BaselineAlignment="Subscript">j</Run>.	Який розв’язок α вона обере?
+            </TextBlock>-->
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Visibility="{Binding IsTestChosen, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Margin="20, 0"
+                    Width="900">
+
+            <!-- HEADER OF TESTS -->
+
+            <Grid Margin="0, 10" Background="Transparent" Width="950">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        Content="Назад" FontSize="18"
+                        Style="{StaticResource RoundButton}"
+                        Command="{Binding BackCommand}">
+                </Button>
+                <UniformGrid Grid.Column="1"></UniformGrid>
+                <TextBlock HorizontalAlignment="Left"
+                           Margin="0, 0, 100, 0"
+                           Grid.Column="2" Text="Binding HeaderText"
+                           Style="{StaticResource Header}">
+                </TextBlock>
+            </Grid>
+
+            <!-- RESULTS -->
+
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0, 10"
+                        Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <TextBlock Style="{StaticResource Header}">
+                    Ваш результат <Run Text="{Binding NumberOfCorrect}"></Run>/<Run Text="{Binding NumberOfTests}"></Run>. <Run Text="Вітаю!"></Run>
+                </TextBlock>
+            </StackPanel>
+
+            <!-- COMMON TESTS -->
+
+            <!-- FIRST TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[0], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                         <Label Content="{Binding test1.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test1.variantA}" IsChecked="{Binding bools[0].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantB}" IsChecked="{Binding bools[0].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantC}" IsChecked="{Binding bools[0].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test1.variantD}" IsChecked="{Binding bools[0].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- SECOND TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[1], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test2.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test2.variantA}" IsChecked="{Binding bools[1].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantB}" IsChecked="{Binding bools[1].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantC}" IsChecked="{Binding bools[1].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test2.variantD}" IsChecked="{Binding bools[1].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- THIRD TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[2], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test3.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test3.variantA}" IsChecked="{Binding bools[2].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantB}" IsChecked="{Binding bools[2].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantC}" IsChecked="{Binding bools[2].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test3.variantD}" IsChecked="{Binding bools[2].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- FOURTH TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[3], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test4.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test4.variantA}" IsChecked="{Binding bools[3].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantB}" IsChecked="{Binding bools[3].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantC}" IsChecked="{Binding bools[3].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test4.variantD}" IsChecked="{Binding bools[3].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- FIVE TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[4], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test5.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test5.variantA}" IsChecked="{Binding bools[4].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantB}" IsChecked="{Binding bools[4].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantC}" IsChecked="{Binding bools[4].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test5.variantD}" IsChecked="{Binding bools[4].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- SIX TEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[5], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test6.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="{Binding test6.variantA}" IsChecked="{Binding bools[5].Item1, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantB}" IsChecked="{Binding bools[5].Item2, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantC}" IsChecked="{Binding bools[5].Item3, Mode=TwoWay}"></RadioButton>
+                            <RadioButton Content="{Binding test6.variantD}" IsChecked="{Binding bools[5].Item4, Mode=TwoWay}"></RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- SEVENTH MULTITEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[6], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test7.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="{Binding test7.variantA}" IsChecked="{Binding bools[6].Item1, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantB}" IsChecked="{Binding bools[6].Item2, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantC}" IsChecked="{Binding bools[6].Item3, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test7.variantD}" IsChecked="{Binding bools[6].Item4, Mode=TwoWay}"></CheckBox>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- EIGHT MULTITEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[7], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test8.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="{Binding test8.variantA}" IsChecked="{Binding bools[7].Item1, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantB}" IsChecked="{Binding bools[7].Item2, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantC}" IsChecked="{Binding bools[7].Item3, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test8.variantD}" IsChecked="{Binding bools[7].Item4, Mode=TwoWay}"></CheckBox>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- NINE MULTITEST -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[8], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test9.description}"></Label>
+                    </StackPanel>
+
+                    <GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="{Binding test9.variantA}" IsChecked="{Binding bools[8].Item1, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantB}" IsChecked="{Binding bools[8].Item2, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantC}" IsChecked="{Binding bools[8].Item3, Mode=TwoWay}"></CheckBox>
+                            <CheckBox Content="{Binding test9.variantD}" IsChecked="{Binding bools[8].Item4, Mode=TwoWay}"></CheckBox>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Label>
+
+            <!-- TEN QUIZ -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[9], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test10.description}"></Label>
+                    </StackPanel>
+
+                    <TextBox Text="{Binding answers[0], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+                </StackPanel>
+            </Label>
+
+            <!-- ELEVEN QUIZ -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[10], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test11.description}"></Label>
+                    </StackPanel>
+
+                    <TextBox Text="{Binding answers[1], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+                </StackPanel>
+            </Label>
+
+
+            <!-- TWELVE QUIZ -->
+            <Label>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                               Content="{Binding AhShitHereWeGoAgain[11], Converter={StaticResource BooleanToPathConverter}, Mode=OneWay}"
+                               Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        </Label>
+                        <Label Content="{Binding test12.description}"></Label>
+                    </StackPanel>
+
+                    <TextBox Text="{Binding answers[2], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+
+                    <!--<GroupBox>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
+                            <CheckBox Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
+                        </StackPanel>
+                    </GroupBox>-->
+                </StackPanel>
+            </Label>
+
+            <Button HorizontalAlignment="Center"
+                    Margin="20"
+                    Style="{StaticResource BasicButton}"
+                    Content="Відповісти"
+                    Command="{Binding SendResultCommand}">
+            </Button>
+
+        </StackPanel>
+
+    </StackPanel>
+
+    <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
         
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                 Text="Тестовый заголовок" Padding="60, 30" Style="{StaticResource Header}">
@@ -47,5 +384,5 @@
                 Style="{StaticResource BigTheoryButton}"
                 Tag="pack://application:,,,/Resources/Icons/m1-image.png"></Button>
 
-    </StackPanel>
+    </StackPanel>-->
 </Page>

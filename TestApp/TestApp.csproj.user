@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MVVM\Views\BlankPage\BlankPage.xaml.cs">
+    <Compile Update="MVVM\Views\TheoryPage\TheoryPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\Views\HomePage\HomePage.xaml.cs">
@@ -21,7 +21,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MVVM\Views\BlankPage\BlankPage.xaml">
+    <Page Update="MVVM\Views\TheoryPage\TheoryPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\HomePage\HomePage.xaml">
@@ -45,7 +45,13 @@
     <Page Update="Resources\Style\Colors.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Style\Documents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Style\Fonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Style\GroupBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Style\Image.xaml">

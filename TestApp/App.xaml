@@ -21,6 +21,8 @@
                 <ResourceDictionary Source="Resources/Style/TextBox.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Style/Button.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Style/ScrollBar.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/Documents.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Style/GroupBox.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>

@@ -53,17 +53,18 @@
     <None Remove="Resources\Icons\free-icon-math-book-dark-theme.png" />
     <None Remove="Resources\Icons\free-icon-math-book-light-theme.png" />
     <None Remove="Resources\Icons\home.png" />
+    <None Remove="Resources\Icons\icon3.png" />
     <None Remove="Resources\Icons\m1-image.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MVVM\Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="HtmlToXamlConverter" Version="1.0.5727.24510" />
     <PackageReference Include="JetBrains.Annotations" Version="2021.2.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" PrivateAssets="All" />
+    <PackageReference Include="WpfMath" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -109,6 +110,7 @@
     <Resource Include="Resources\Fonts\WorkSans\WorkSans-ThinItalic.ttf" />
     <Resource Include="Resources\Icons\free-icon-math-book-dark-theme.png" />
     <Resource Include="Resources\Icons\free-icon-math-book-light-theme.png" />
+    <Resource Include="Resources\Icons\icon3.png" />
     <Resource Include="Resources\Icons\m1-image.png" />
   </ItemGroup>
 

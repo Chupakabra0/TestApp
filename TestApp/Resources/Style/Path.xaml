@@ -5,20 +5,16 @@
     <!-- LOGOUT -->
     <Style TargetType="Path" x:Key="LogoutPath">
         <Setter Property="Fill" Value="{StaticResource AppWhiteBrush}"></Setter>
-        <Setter Property="Stroke" Value="{StaticResource AppWhiteBrush}"></Setter>
+        <Setter Property="Stroke" Value="Transparent"></Setter>
 
         <Style.Triggers>
             <DataTrigger Binding="{Binding Path=DarkTheme, Source={x:Static p:Settings.Default}}" Value="False">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                <LinearColorKeyFrame KeyTime="0:0:0.25"
-                                                 Value="{StaticResource AppBlackColor}"/>
-                            </ColorAnimationUsingKeyFrames>
-                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
-                                <LinearColorKeyFrame KeyTime="0:0:0.25"
-                                                 Value="{StaticResource AppBlackColor}"/>
+                            <ColorAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25" Value="{StaticResource AppBlackColor}" />
                             </ColorAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
@@ -26,13 +22,9 @@
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                <LinearColorKeyFrame KeyTime="0:0:0.25"
-                                                 Value="{StaticResource AppWhiteColor}"/>
-                            </ColorAnimationUsingKeyFrames>
-                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)">
-                                <LinearColorKeyFrame KeyTime="0:0:0.25"
-                                                 Value="{StaticResource AppWhiteColor}"/>
+                            <ColorAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+                                <LinearColorKeyFrame KeyTime="0:0:0.25" Value="{StaticResource AppWhiteColor}" />
                             </ColorAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>

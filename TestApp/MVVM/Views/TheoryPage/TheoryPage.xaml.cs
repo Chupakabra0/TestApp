@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 namespace TestApp.MVVM.Views.BlankPage
 {
     /// <summary>
-    /// Логика взаимодействия для BlankPage.xaml
+    /// Логика взаимодействия для TheoryPage.xaml
     /// </summary>
     public partial class BlankPage : Page
     {
