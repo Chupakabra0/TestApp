@@ -93,7 +93,6 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public void MixCommon()
         {
-            Random random = new Random();
             int j = 0;
             for (int i = this.obj_common.Count - 1; i >= 1; i--)
             {
@@ -173,10 +172,13 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 }
                 else
                 {
-                    this.bools[i].Item1 = obj_common[i].variantA.isCorrect;
-                    this.bools[i].Item2 = obj_common[i].variantB.isCorrect;
-                    this.bools[i].Item3 = obj_common[i].variantC.isCorrect;
-                    this.bools[i].Item4 = obj_common[i].variantD.isCorrect;
+                    var temp = new Quadro<bool, bool, bool, bool>(
+                      obj_common[i].variantA.isCorrect,
+                      obj_common[i].variantB.isCorrect,
+                      obj_common[i].variantC.isCorrect,
+                      obj_common[i].variantD.isCorrect
+                    );
+                    this.bools[i] = temp;
                 }
             }
             for (int j = 0; j < 3; j++, i++)
@@ -186,12 +188,14 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                     this.NumberOfCorrect++;
                     AhShitHereWeGoAgain[i] = true;
                 }
-                else
-                {
-                    this.bools[i].Item1 = obj_multitest[j].variantA.isCorrect;
-                    this.bools[i].Item2 = obj_multitest[j].variantB.isCorrect;
-                    this.bools[i].Item3 = obj_multitest[j].variantC.isCorrect;
-                    this.bools[i].Item4 = obj_multitest[j].variantD.isCorrect;
+                else {
+                    var temp = new Quadro<bool, bool, bool, bool>(
+                      obj_multitest[j].variantA.isCorrect,
+                      obj_multitest[j].variantB.isCorrect,
+                      obj_multitest[j].variantC.isCorrect,
+                      obj_multitest[j].variantD.isCorrect
+                    );
+                    this.bools[i] = temp;
                 }
             }
             for (int j = 0; j < answers.Count; j++, i++)
