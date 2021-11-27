@@ -13,9 +13,12 @@ using TestApp.Core.Repository.Question;
 namespace TestApp.MVVM.ViewModels.TestViewModel {
     public class TestViewModel : BaseViewModel.BaseViewModel {
         public TestViewModel() {
-            this.obj_common = this.repository.GetSavageCommonTest();
-            this.obj_multitest = this.repository.GetSavageMultitestTest();
-            this.obj_quiz = this.repository.GetSavageQuizTest();
+
+            this.random_seed = Guid.NewGuid().GetHashCode();
+            //this.random_seed = 2;
+
+            this.IsTestComplete = false;
+
             this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
             this.answers = new ObservableCollection<string>();
             this.AhShitHereWeGoAgain = new ObservableCollection<bool>();
@@ -30,48 +33,51 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             }
 
             this.NumberOfTests = bools.Count + answers.Count;
-            this.IsTestComplete = false;
 
             for (var i = 0; i < NumberOfTests; i++)
             {
                 this.AhShitHereWeGoAgain.Add(false);
             }
-
-
-            MixCommon();
-            MixMultiTest();
-            MixQuiz();
-
-            this.test1 = new Test(obj_common[0]);
-            this.test2 = new Test(obj_common[1]);
-            this.test3 = new Test(obj_common[2]);
-            this.test4 = new Test(obj_common[3]);
-            this.test5 = new Test(obj_common[4]);
-            this.test6 = new Test(obj_common[5]);
-
-            this.test7 = new Test(obj_multitest[0]);
-            this.test8 = new Test(obj_multitest[1]);
-            this.test9 = new Test(obj_multitest[2]);
-
-            this.test10 = new Test(obj_quiz[0]);
-            this.test11 = new Test(obj_quiz[1]);
-            this.test12 = new Test(obj_quiz[2]);
         }
+
+        public string HeaderText { get; set; }
+        public bool IsTestChosen { get; set; }
+        public bool IsMenuEnabled => !this.IsTestChosen;
+        public bool IsTestComplete { get; set; }
+        public IQuestionRepository repository = new JsonQuestionRepository("test.json");
+        public JsonQuestionRepository main_object = new JsonQuestionRepository("test.json");
+
+        #region [COMMANDS]
 
         public ICommand OpenSavageCommand =>
             new RelayCommand(() => {
-                // TODO: savage test generate
+                this.HeaderText = main_object.result.pulls[0].name;
+                this.obj_common = this.repository.GetSavageCommonTest();
+                this.obj_multitest = this.repository.GetSavageMultitestTest();
+                this.obj_quiz = this.repository.GetSavageQuizTest();
+
+                InitializationComponents();
+
                 this.IsTestChosen = true;
             });
 
         public ICommand OpenPearsonCommand =>
             new RelayCommand(() => {
-                // TODO: pearson test generate
+                this.HeaderText = main_object.result.pulls[1].name;
+
+                this.obj_common = this.repository.GetPearsonCommonTest();
+                this.obj_multitest = this.repository.GetPearsonMultitestTest();
+                this.obj_quiz = this.repository.GetPearsonQuizTest();
+
+                InitializationComponents();
+
                 this.IsTestChosen = true;
             });
 
         public ICommand BackCommand =>
             new RelayCommand(() => {
+                Clear();
+                this.IsTestComplete = false;
                 this.IsTestChosen = false;
             });
 
@@ -81,45 +87,39 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 this.IsTestComplete = true;
             });
 
-        public bool IsTestChosen      { get; set; }
-        public bool IsMenuEnabled  => !this.IsTestChosen;
-        public bool IsTestComplete    { get; set; }
-        public IQuestionRepository repository = new JsonQuestionRepository("test.json");
+#endregion
 
 #region [SHUFFLE]
-        public List<int> rand_common = new List<int>();
-        public List<int> rand_multitest = new List<int>();
-        public List<int> rand_quiz = new List<int>();
+
+        public int random_seed { get; set; }
 
         public void MixCommon()
         {
+            Random random = new Random(random_seed);
             int j = 0;
             for (int i = this.obj_common.Count - 1; i >= 1; i--)
             {
                 j = random.Next(i + 1);
-                rand_common.Add(j);
                 (this.obj_common[j], this.obj_common[i]) = (this.obj_common[i], this.obj_common[j]);
             }
         }
         public void MixMultiTest()
         {
-            Random random = new Random();
+            Random random = new Random(random_seed);
             int j = 0;
             for (int i = this.obj_multitest.Count - 1; i >= 1; i--)
             {
                 j = random.Next(i + 1);
-                rand_multitest.Add(j);
                 (this.obj_multitest[j], this.obj_multitest[i]) = (this.obj_multitest[i], this.obj_multitest[j]);
             }
         }
         public void MixQuiz()
         {
-            Random random = new Random();
+            Random random = new Random(random_seed);
             int j = 0;
             for (int i = this.obj_quiz.Count - 1; i >= 1; i--)
             {
                 j = random.Next(i + 1);
-                rand_quiz.Add(j);
                 (this.obj_quiz[j], this.obj_quiz[i]) = (this.obj_quiz[i], this.obj_quiz[j]);
             }
         }
@@ -131,6 +131,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public List<Multitest> obj_multitest { get; set; }
         public List<Quiz> obj_quiz { get; set; }
 
+        //--------------------- COMMONS -----------------------------//
         public Test test1 { get; set; }
         public Test test2 { get; set; }
         public Test test3 { get; set; }
@@ -138,20 +139,13 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public Test test5 { get; set; }
         public Test test6 { get; set; }
 
-        public bool RB_a1_Checked { get; set; }
-        public bool RB_b1_Checked { get; set; }
-        public bool RB_c1_Checked { get; set; }
-        public bool RB_d1_Checked { get; set; }
-
-        public bool CheckMark_1 => this.RB_d1_Checked;
-
         //--------------------- MULTITESTS -----------------------------//
         public Test test7 { get; set; }
         public Test test8 { get; set; }
         public Test test9 { get; set; }
 
 
-        //--------------------- QUESTION -----------------------------//
+        //--------------------- QUIZ -----------------------------//
         public Test test10 { get; set; }
         public Test test11 { get; set; }
         public Test test12 { get; set; }
@@ -216,6 +210,52 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         public ObservableCollection<bool> AhShitHereWeGoAgain { get; set; }
         public ObservableCollection<Quadro<bool,bool,bool,bool>> bools { get; set; }
         public ObservableCollection<string> answers { get; set; }
+        #endregion
+
+#region [FUNCTIONS]
+        void InitializationComponents()
+        {
+            MixCommon();
+            MixMultiTest();
+            MixQuiz();
+
+            this.test1 = new Test(obj_common[0]);
+            this.test2 = new Test(obj_common[1]);
+            this.test3 = new Test(obj_common[2]);
+            this.test4 = new Test(obj_common[3]);
+            this.test5 = new Test(obj_common[4]);
+            this.test6 = new Test(obj_common[5]);
+
+            this.test7 = new Test(obj_multitest[0]);
+            this.test8 = new Test(obj_multitest[1]);
+            this.test9 = new Test(obj_multitest[2]);
+
+            this.test10 = new Test(obj_quiz[0]);
+            this.test11 = new Test(obj_quiz[1]);
+            this.test12 = new Test(obj_quiz[2]);
+        }
+
+        void Clear()
+        {
+            this.bools.Clear();
+            this.answers.Clear();
+            this.AhShitHereWeGoAgain.Clear();
+
+            for (var i = 0; i < 9; i++)
+            {
+                this.bools.Add(new Quadro<bool, bool, bool, bool>(false, false, false, false));
+            }
+            for (var i = 0; i < 3; i++)
+            {
+                this.answers.Add(" ");
+            }
+
+            for (var i = 0; i < NumberOfTests; i++)
+            {
+                this.AhShitHereWeGoAgain.Add(false);
+            }
+        }
 #endregion
+
     }
 }

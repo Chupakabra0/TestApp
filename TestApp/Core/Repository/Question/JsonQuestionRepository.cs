@@ -10,7 +10,7 @@ namespace TestApp.Core.Repository.Question
     public class JsonQuestionRepository : IQuestionRepository
     {
         public string FileName { get; set; }
-        Pulls result;
+        public Pulls result { get; set; }
         public JsonQuestionRepository(string file)
         {
             this.FileName = file;
