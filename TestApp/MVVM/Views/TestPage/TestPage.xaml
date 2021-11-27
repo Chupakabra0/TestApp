@@ -103,7 +103,7 @@
                          <Label Content="{Binding test1.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test1.variantA}" IsChecked="{Binding bools[0].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test1.variantB}" IsChecked="{Binding bools[0].Item2, Mode=TwoWay}"></RadioButton>
@@ -125,7 +125,7 @@
                         <Label Content="{Binding test2.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test2.variantA}" IsChecked="{Binding bools[1].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test2.variantB}" IsChecked="{Binding bools[1].Item2, Mode=TwoWay}"></RadioButton>
@@ -147,7 +147,7 @@
                         <Label Content="{Binding test3.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test3.variantA}" IsChecked="{Binding bools[2].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test3.variantB}" IsChecked="{Binding bools[2].Item2, Mode=TwoWay}"></RadioButton>
@@ -169,7 +169,7 @@
                         <Label Content="{Binding test4.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test4.variantA}" IsChecked="{Binding bools[3].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test4.variantB}" IsChecked="{Binding bools[3].Item2, Mode=TwoWay}"></RadioButton>
@@ -191,7 +191,7 @@
                         <Label Content="{Binding test5.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test5.variantA}" IsChecked="{Binding bools[4].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test5.variantB}" IsChecked="{Binding bools[4].Item2, Mode=TwoWay}"></RadioButton>
@@ -213,7 +213,7 @@
                         <Label Content="{Binding test6.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <RadioButton Content="{Binding test6.variantA}" IsChecked="{Binding bools[5].Item1, Mode=TwoWay}"></RadioButton>
                             <RadioButton Content="{Binding test6.variantB}" IsChecked="{Binding bools[5].Item2, Mode=TwoWay}"></RadioButton>
@@ -235,7 +235,7 @@
                         <Label Content="{Binding test7.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <CheckBox Content="{Binding test7.variantA}" IsChecked="{Binding bools[6].Item1, Mode=TwoWay}"></CheckBox>
                             <CheckBox Content="{Binding test7.variantB}" IsChecked="{Binding bools[6].Item2, Mode=TwoWay}"></CheckBox>
@@ -257,7 +257,7 @@
                         <Label Content="{Binding test8.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <CheckBox Content="{Binding test8.variantA}" IsChecked="{Binding bools[7].Item1, Mode=TwoWay}"></CheckBox>
                             <CheckBox Content="{Binding test8.variantB}" IsChecked="{Binding bools[7].Item2, Mode=TwoWay}"></CheckBox>
@@ -279,7 +279,7 @@
                         <Label Content="{Binding test9.description}"></Label>
                     </StackPanel>
 
-                    <GroupBox>
+                    <GroupBox IsEnabled="{Binding IsTestNotComplete}">
                         <StackPanel Orientation="Vertical">
                             <CheckBox Content="{Binding test9.variantA}" IsChecked="{Binding bools[8].Item1, Mode=TwoWay}"></CheckBox>
                             <CheckBox Content="{Binding test9.variantB}" IsChecked="{Binding bools[8].Item2, Mode=TwoWay}"></CheckBox>
@@ -301,7 +301,9 @@
                         <Label Content="{Binding test10.description}"></Label>
                     </StackPanel>
 
-                    <TextBox Text="{Binding answers[0], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+                    <TextBox IsEnabled="{Binding IsTestNotComplete}"
+                             Text="{Binding answers[0], Mode=TwoWay}"
+                             HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
                 </StackPanel>
             </Label>
 
@@ -316,7 +318,9 @@
                         <Label Content="{Binding test11.description}"></Label>
                     </StackPanel>
 
-                    <TextBox Text="{Binding answers[1], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+                    <TextBox IsEnabled="{Binding IsTestNotComplete}"
+                             Text="{Binding answers[1], Mode=TwoWay}"
+                             HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
                 </StackPanel>
             </Label>
 
@@ -332,7 +336,9 @@
                         <Label Content="{Binding test12.description}"></Label>
                     </StackPanel>
 
-                    <TextBox Text="{Binding answers[2], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
+                    <TextBox IsEnabled="{Binding IsTestNotComplete}"
+                             Text="{Binding answers[2], Mode=TwoWay}"
+                             HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
 
                 </StackPanel>
             </Label>
