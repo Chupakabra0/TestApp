@@ -7,6 +7,7 @@
       xmlns:testviewmodel="clr-namespace:TestApp.MVVM.ViewModels.TestViewModel"
       xmlns:Controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
       xmlns:p="clr-namespace:TestApp.Properties"
+      xmlns:inverseBooleanConverter="clr-namespace:TestApp.Core.Converters.InverseBooleanConverter"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="900"
       Title="TestPage">
@@ -14,6 +15,10 @@
     <Page.DataContext>
         <testviewmodel:TestViewModel></testviewmodel:TestViewModel>
     </Page.DataContext>
+
+    <Page.Resources>
+        <inverseBooleanConverter:InverseBooleanConverter x:Key="InverseBooleanConverter"></inverseBooleanConverter:InverseBooleanConverter>
+    </Page.Resources>
 
     <StackPanel Orientation="Vertical">
 
@@ -329,14 +334,6 @@
 
                     <TextBox Text="{Binding answers[2], Mode=TwoWay}" HorizontalAlignment="Left" Width="700" Margin="0, 15"></TextBox>
 
-                    <!--<GroupBox>
-                        <StackPanel Orientation="Vertical">
-                            <CheckBox Content="{Binding RB_a1_Content}" IsChecked="{Binding RB_a1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_b1_Content}" IsChecked="{Binding RB_b1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_c1_Content}" IsChecked="{Binding RB_c1_Checked}"></CheckBox>
-                            <CheckBox Content="{Binding RB_d1_Content}" IsChecked="{Binding RB_d1_Checked}"></CheckBox>
-                        </StackPanel>
-                    </GroupBox>-->
                 </StackPanel>
             </Label>
 
@@ -344,46 +341,20 @@
                     Margin="20"
                     Style="{StaticResource BasicButton}"
                     Content="Відповісти"
-                    Command="{Binding SendResultCommand}">
+                    Command="{Binding SendResultCommand}"
+                    Visibility="{Binding IsTestNotComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
             </Button>
+
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Margin="0, 0, 50, 0"
+                        Visibility="{Binding IsTestComplete, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <TextBlock Style="{StaticResource Header}">
+                    <Run Text="{Binding NumberOfCorrect}"></Run>/<Run Text="{Binding NumberOfTests}"></Run>
+                </TextBlock>
+            </StackPanel>
 
         </StackPanel>
 
     </StackPanel>
 
-    <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
-        
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                Text="Тестовый заголовок" Padding="60, 30" Style="{StaticResource Header}">
-        </TextBlock>
-
-        <TextBlock Style="{StaticResource Content}" Text="Тестовый текст, который я пишу для теста..."></TextBlock>
-
-        <GroupBox Padding="20" BorderThickness="0">
-            <StackPanel>
-                <RadioButton Content="Test1"></RadioButton>
-                <RadioButton Content="Test2"></RadioButton>
-                <RadioButton Content="Test3"></RadioButton>
-                <RadioButton Content="Test4"></RadioButton>
-            </StackPanel>
-        </GroupBox>
-
-        <GroupBox Padding="20" BorderThickness="0">
-            <StackPanel>
-                <CheckBox Content="Test1"></CheckBox>
-                <CheckBox Content="Test2"></CheckBox>
-                <CheckBox Content="Test3"></CheckBox>
-                <CheckBox Content="Test4"></CheckBox>
-            </StackPanel>
-        </GroupBox>
-
-        <TextBox Margin="20" Width="800"></TextBox>
-
-        <Button Margin="20" Content="Log in" Style="{StaticResource BasicButton}"></Button>
-        <Button Margin="20" Content="Back" Style="{StaticResource RoundButton}"></Button>
-        <Button Margin="20" Content="Method"
-                Style="{StaticResource BigTheoryButton}"
-                Tag="pack://application:,,,/Resources/Icons/m1-image.png"></Button>
-
-    </StackPanel>-->
 </Page>

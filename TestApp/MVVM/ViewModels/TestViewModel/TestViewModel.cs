@@ -44,9 +44,13 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         }
 
         public string HeaderText { get; set; }
+
         public bool IsTestChosen { get; set; }
         public bool IsMenuEnabled => !this.IsTestChosen;
-        public bool IsTestComplete { get; set; }
+
+        public bool IsTestComplete    { get; set; }
+        public bool IsTestNotComplete => !this.IsTestComplete;
+
         public IQuestionRepository repository = new JsonQuestionRepository("test.json");
         public JsonQuestionRepository main_object = new JsonQuestionRepository("test.json");
 
