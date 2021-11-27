@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -19,8 +20,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
             this.IsTestComplete = false;
 
-            this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
-            this.answers = new ObservableCollection<string>();
+            this.bools               = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
+            this.answers             = new ObservableCollection<string>();
             this.AhShitHereWeGoAgain = new ObservableCollection<bool>();
 
             for (var i = 0; i < 9; i++)
@@ -29,7 +30,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             }
             for (var i = 0; i < 3; i++)
             {
-                this.answers.Add(" ");
+                this.answers.Add(string.Empty);
             }
 
             this.NumberOfTests = bools.Count + answers.Count;
@@ -206,13 +207,17 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             }
         }
         public int NumberOfCorrect { get; set; }
-        public int NumberOfTests { get; set; }
-        public ObservableCollection<bool> AhShitHereWeGoAgain { get; set; }
+        public int NumberOfTests   { get; set; }
+
+        public ObservableCollection<bool> AhShitHereWeGoAgain      { get; set; }
+
         public ObservableCollection<Quadro<bool,bool,bool,bool>> bools { get; set; }
         public ObservableCollection<string> answers { get; set; }
+
+
         #endregion
 
-#region [FUNCTIONS]
+        #region [FUNCTIONS]
         void InitializationComponents()
         {
             MixCommon();
@@ -235,24 +240,19 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.test12 = new Test(obj_quiz[2]);
         }
 
-        void Clear()
-        {
-            this.bools.Clear();
-            this.answers.Clear();
-            this.AhShitHereWeGoAgain.Clear();
-
+        void Clear() {
             for (var i = 0; i < 9; i++)
             {
-                this.bools.Add(new Quadro<bool, bool, bool, bool>(false, false, false, false));
+                this.bools[i] = new (false, false, false, false);
             }
             for (var i = 0; i < 3; i++)
             {
-                this.answers.Add(" ");
+                this.answers[i] = string.Empty;
             }
 
             for (var i = 0; i < NumberOfTests; i++)
             {
-                this.AhShitHereWeGoAgain.Add(false);
+                this.AhShitHereWeGoAgain[i] = false;
             }
         }
 #endregion
