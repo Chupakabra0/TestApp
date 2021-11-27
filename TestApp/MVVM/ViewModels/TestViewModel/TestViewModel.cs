@@ -9,6 +9,8 @@ using System.Windows.Markup;
 using TestApp.Core.Commands.RelayCommand;
 using TestApp.Core.Quadro;
 using TestApp.Core.Repository.Question;
+using TestApp.Core.Repository.Theory;
+
 //using TestLibrary;
 
 namespace TestApp.MVVM.ViewModels.TestViewModel {
@@ -60,6 +62,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 InitializationComponents();
 
                 this.IsTestChosen = true;
+
+                DummyTheoryRepository.Instance.IsThroll = true;
             });
 
         public ICommand OpenPearsonCommand =>
@@ -73,6 +77,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 InitializationComponents();
 
                 this.IsTestChosen = true;
+
+                DummyTheoryRepository.Instance.IsThroll = true;
             });
 
         public ICommand BackCommand =>
@@ -80,12 +86,16 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 Clear();
                 this.IsTestComplete = false;
                 this.IsTestChosen = false;
+
+                DummyTheoryRepository.Instance.IsThroll = false;
             });
 
         public ICommand SendResultCommand =>
             new RelayCommand(() => {
                 ValidationTest();
                 this.IsTestComplete = true;
+
+                DummyTheoryRepository.Instance.IsThroll = false;
             });
 
 #endregion

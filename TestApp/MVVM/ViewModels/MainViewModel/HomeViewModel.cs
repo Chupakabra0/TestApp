@@ -35,7 +35,7 @@ namespace TestApp.MVVM.ViewModels.MainViewModel {
         }
         void Open_theory_page()
         {
-            this.CurrentView = this.TheoryPage;
+            this.CurrentView = new BlankPage();
         }
         void Open_settings_page()
         {

@@ -13,11 +13,12 @@
       Title="BlankPage">
 
     <Page.DataContext>
-        <ObjectDataProvider ObjectType="{x:Type theoryViewModel:TheoryViewModel}">
+        <theoryViewModel:TheoryViewModel></theoryViewModel:TheoryViewModel>
+        <!--<ObjectDataProvider ObjectType="{x:Type theoryViewModel:TheoryViewModel}">
             <ObjectDataProvider.ConstructorParameters>
                 <theory:DummyTheoryRepository></theory:DummyTheoryRepository>
             </ObjectDataProvider.ConstructorParameters>
-        </ObjectDataProvider>
+        </ObjectDataProvider>-->
     </Page.DataContext>
 
     <StackPanel Orientation="Vertical">

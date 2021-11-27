@@ -6,8 +6,8 @@ using TestApp.Core.Repository.Theory;
 namespace TestApp.MVVM.ViewModels.TheoryViewModel
 {
     public class TheoryViewModel : BaseViewModel.BaseViewModel {
-        public TheoryViewModel(ITheoryRepository repository) {
-            this.TheoryRepository = repository;
+        public TheoryViewModel() {
+            this.TheoryRepository = DummyTheoryRepository.Instance;
         }
 
         public FlowDocument Document { get; set; }
