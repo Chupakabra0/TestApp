@@ -45,5 +45,14 @@ namespace TestApp.Core.Repository.Question
         {
             return result.pulls[0].questions.quiz_tests;
         }
+
+        public string GetNameSavage()
+        {
+            return result.pulls[0].name;
+        }
+        public string GetNamePearson()
+        {
+            return result.pulls[1].name;
+        }
     }
 }

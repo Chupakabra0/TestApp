@@ -15,6 +15,8 @@ namespace TestApp.Core.Repository.Question
 
         public List<Quiz> GetSavageQuizTest();
         public List<Quiz> GetPearsonQuizTest();
+        public string GetNameSavage();
+        public string GetNamePearson();
 
     } 
 }

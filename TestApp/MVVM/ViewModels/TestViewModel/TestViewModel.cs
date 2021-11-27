@@ -8,22 +8,23 @@ using System.Windows.Input;
 using System.Windows.Markup;
 using TestApp.Core.Commands.RelayCommand;
 using TestApp.Core.Quadro;
+using TestApp.Core.Repository;
 using TestApp.Core.Repository.Question;
 using TestApp.Core.Repository.Theory;
+using TestApp.MVVM.Models;
 
 //using TestLibrary;
 
 namespace TestApp.MVVM.ViewModels.TestViewModel {
-    public class TestViewModel : BaseViewModel.BaseViewModel {
-        public TestViewModel() {
-
-            this.random_seed = Guid.NewGuid().GetHashCode();
-            //this.random_seed = 2;
+    public class TestViewModel : BaseViewModel.BaseViewModel
+    {
+        public TestViewModel()
+        {
 
             this.IsTestComplete = false;
 
-            this.bools               = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
-            this.answers             = new ObservableCollection<string>();
+            this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
+            this.answers = new ObservableCollection<string>();
             this.AhShitHereWeGoAgain = new ObservableCollection<bool>();
 
             for (var i = 0; i < 9; i++)
@@ -50,11 +51,14 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public bool IsTestComplete    { get; set; }
         public bool IsTestNotComplete => !this.IsTestComplete;
+        //public IQuestionRepository repository = new JsonQuestionRepository("test.json");
+        public IQuestionRepository repository = new HttpQuestionsRepository();
 
-        public IQuestionRepository repository = new JsonQuestionRepository("test.json");
         public JsonQuestionRepository main_object = new JsonQuestionRepository("test.json");
+        public User user;
+        public JsonPostResult future_file = new JsonPostResult();
 
-        #region [COMMANDS]
+#region [COMMANDS]
 
         public ICommand OpenSavageCommand =>
             new RelayCommand(() => {
@@ -98,13 +102,15 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             new RelayCommand(() => {
                 ValidationTest();
                 this.IsTestComplete = true;
+                user = new User(Environment.UserName, NumberOfCorrect);
+                future_file.ConvertToJson(user);
 
                 DummyTheoryRepository.Instance.IsThroll = false;
             });
 
-#endregion
+        #endregion
 
-#region [SHUFFLE]
+        #region [SHUFFLE]
 
         public int random_seed { get; set; }
 
@@ -231,9 +237,11 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         #endregion
 
-        #region [FUNCTIONS]
+#region [FUNCTIONS]
         void InitializationComponents()
         {
+            this.random_seed = Guid.NewGuid().GetHashCode();
+
             MixCommon();
             MixMultiTest();
             MixQuiz();
