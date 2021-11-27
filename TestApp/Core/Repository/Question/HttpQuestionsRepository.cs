@@ -63,6 +63,7 @@ namespace TestApp.Core.Repository.Question
         {
             var request = WebRequest.Create(url);
             request.Method = "GET";
+            request.Proxy  = null;
 
             using var webResponse = request.GetResponse();
             using var webStream = webResponse.GetResponseStream();
