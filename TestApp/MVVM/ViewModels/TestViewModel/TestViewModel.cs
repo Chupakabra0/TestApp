@@ -54,18 +54,18 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         //public IQuestionRepository repository = new JsonQuestionRepository("test.json");
         public IQuestionRepository repository = new HttpQuestionsRepository();
 
-        public JsonQuestionRepository main_object = new JsonQuestionRepository("test.json");
         public User user;
-        public JsonPostResult future_file = new JsonPostResult();
+        public JsonPostResult future_file = new ();
 
 #region [COMMANDS]
 
         public ICommand OpenSavageCommand =>
             new RelayCommand(() => {
-                this.HeaderText = main_object.result.pulls[0].name;
-                this.obj_common = this.repository.GetSavageCommonTest();
+                this.obj_common    = this.repository.GetSavageCommonTest();
                 this.obj_multitest = this.repository.GetSavageMultitestTest();
-                this.obj_quiz = this.repository.GetSavageQuizTest();
+                this.obj_quiz      = this.repository.GetSavageQuizTest();
+                // DON'T MOVE THIS TO ANOTHER POSITION
+                this.HeaderText    = this.repository.GetNameSavage();
 
                 InitializationComponents();
 
@@ -76,11 +76,11 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public ICommand OpenPearsonCommand =>
             new RelayCommand(() => {
-                this.HeaderText = main_object.result.pulls[1].name;
-
-                this.obj_common = this.repository.GetPearsonCommonTest();
+                this.obj_common    = this.repository.GetPearsonCommonTest();
                 this.obj_multitest = this.repository.GetPearsonMultitestTest();
-                this.obj_quiz = this.repository.GetPearsonQuizTest();
+                this.obj_quiz      = this.repository.GetPearsonQuizTest();
+                // DON'T MOVE THIS TO ANOTHER POSITION
+                this.HeaderText    = this.repository.GetNamePearson();
 
                 InitializationComponents();
 
