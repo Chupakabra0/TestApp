@@ -13,6 +13,17 @@ namespace TestApp.Core.Repository
             jsonData = JsonConvert.SerializeObject(user);
             System.IO.File.WriteAllText("result.json", jsonData);
         }
+
+        public void PostPearson(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PostSavage(User user)
+        {
+            throw new NotImplementedException();
+        }
+
         public string jsonData { get; set;}
     }
 }

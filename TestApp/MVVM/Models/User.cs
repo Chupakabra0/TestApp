@@ -7,7 +7,7 @@ namespace TestApp.MVVM.Models
 {
     public class User
     {
-        public User(string student, int res)
+        public User(string student, string res)
         {
             name = student;
             result = res;
@@ -16,7 +16,7 @@ namespace TestApp.MVVM.Models
         [JsonProperty("student")]
         public string name { get; set; }
         [JsonProperty("result")]
-        public int result { get; set; }
+        public string result { get; set; }
         [JsonProperty("time")]
         public DateTime time { get; set; }
     }

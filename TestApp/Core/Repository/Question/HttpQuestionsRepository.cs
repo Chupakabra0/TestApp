@@ -11,7 +11,7 @@ namespace TestApp.Core.Repository.Question
     class HttpQuestionsRepository : IQuestionRepository
     {
         public Pull result { get; set; }
-
+        
         public List<Common> GetPearsonCommonTest()
         {
             ServerPearson();
@@ -51,6 +51,7 @@ namespace TestApp.Core.Repository.Question
         private void ServerSavage()
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25771088c3e91a3525bda";
+
             Server(url);
         }
         private void ServerPearson()
@@ -77,11 +78,13 @@ namespace TestApp.Core.Repository.Question
 
         public string GetNameSavage()
         {
+            ServerSavage();
             return result.name;
         }
 
         public string GetNamePearson()
         {
+            ServerPearson();
             return result.name;
         }
     }

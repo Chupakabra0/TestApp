@@ -56,6 +56,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public User user;
         public JsonPostResult future_file = new ();
+        public IPostResult post_result = new HttpPostResult();
 
 #region [COMMANDS]
 
@@ -102,9 +103,21 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             new RelayCommand(() => {
                 ValidationTest();
                 this.IsTestComplete = true;
-                user = new User(Environment.UserName, NumberOfCorrect);
-                future_file.ConvertToJson(user);
-
+                user = new User( "куку"/*Environment.UserName*/, String.Format("{0}/{1}", NumberOfCorrect.ToString(), NumberOfTests.ToString()));
+                //future_file.ConvertToJson(user);
+                if(HeaderText == repository.GetNamePearson())
+                {
+                    post_result.PostPearson(user);
+                }
+                else if(HeaderText == repository.GetNameSavage())
+                {
+                    post_result.PostSavage(user);
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+                //post_result.ConvertToJson(user);
                 DummyTheoryRepository.Instance.IsThroll = false;
             });
 
