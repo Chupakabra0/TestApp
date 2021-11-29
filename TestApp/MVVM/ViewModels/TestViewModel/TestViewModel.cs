@@ -103,7 +103,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             new RelayCommand(() => {
                 ValidationTest();
                 this.IsTestComplete = true;
-                user = new User( "куку"/*Environment.UserName*/, String.Format("{0}/{1}", NumberOfCorrect.ToString(), NumberOfTests.ToString()));
+                user = new User( Environment.UserName, String.Format("{0}/{1}", NumberOfCorrect.ToString(), NumberOfTests.ToString()));
                 //future_file.ConvertToJson(user);
                 if(HeaderText == repository.GetNamePearson())
                 {

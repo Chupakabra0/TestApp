@@ -17,12 +17,40 @@ namespace TestApp.Core.Repository
         public void PostPearson(User user)
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25f6f088c3e91a3525bef/results";
-            Server(url, user);
+            try
+            {
+                Server(url, user);
+            }
+            catch
+            {
+                try
+                {
+                    ServerPut(url, user);
+                }
+                catch
+                {
+                    throw new NotImplementedException();
+                }
+            }
         }
         public void PostSavage(User user)
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25771088c3e91a3525bda/results";
-            Server(url, user);
+            try
+            {
+                Server(url, user);
+            }
+            catch
+            {
+                try
+                {
+                    ServerPut(url, user);
+                }
+                catch
+                {
+                    throw new NotImplementedException();
+                }
+            }
         }
         public void Server(string url, User user)
         {
@@ -30,7 +58,18 @@ namespace TestApp.Core.Repository
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             httpWebRequest.Proxy = null;
-
+            ServerString(httpWebRequest, user);
+        }
+        public void ServerPut(string url, User user)
+        {
+            var httpWebRequest = WebRequest.CreateHttp(url);
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "PUT";
+            httpWebRequest.Proxy = null;
+            ServerString(httpWebRequest, user);
+        }
+        public void ServerString(HttpWebRequest httpWebRequest, User user)
+        {
             string jsonData = JsonConvert.SerializeObject(user);
 
 
