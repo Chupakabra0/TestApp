@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -20,7 +21,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
     {
         public TestViewModel()
         {
-
+            this.Internet = CheckForInternetConnection();
             this.IsTestComplete = false;
 
             this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
@@ -48,7 +49,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public bool IsTestChosen { get; set; }
         public bool IsMenuEnabled => !this.IsTestChosen;
-
+        public bool Internet { get; set; }
         public bool IsTestComplete    { get; set; }
         public bool IsTestNotComplete => !this.IsTestComplete;
         //public IQuestionRepository repository = new JsonQuestionRepository("test.json");
@@ -290,7 +291,23 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 this.AhShitHereWeGoAgain[i] = false;
             }
         }
-#endregion
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("http://www.google.com"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
 
     }
 }
