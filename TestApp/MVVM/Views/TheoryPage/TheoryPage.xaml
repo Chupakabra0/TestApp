@@ -56,7 +56,7 @@
                         Command="{Binding BackCommand}">
                 </Button>
                 <UniformGrid Grid.Column="1"></UniformGrid>
-                <TextBlock HorizontalAlignment="Left" Margin="0, 0, 100, 0" Grid.Column="2" Text="Binding HeaderText"
+                <TextBlock HorizontalAlignment="Left" Margin="0, 0, 100, 0" Grid.Column="2" Text="{Binding DocumentName}"
                            Style="{StaticResource Header}">
                 </TextBlock>
             </Grid>
@@ -71,11 +71,6 @@
                     </ControlTemplate>
                 </FlowDocumentPageViewer.Template>
             </FlowDocumentPageViewer>
-
-            <Button Margin="20"
-                    Content="Тест" HorizontalAlignment="Center"
-                    Style="{StaticResource BasicButton}">
-            </Button>
 
         </StackPanel>
 
