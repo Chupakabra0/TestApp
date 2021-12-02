@@ -47,7 +47,6 @@ namespace TestApp.Core.Repository.Question
             ServerSavage();
             return result.questions.quiz_tests;
         }
-
         private void ServerSavage()
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25771088c3e91a3525bda";

@@ -63,32 +63,46 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public ICommand OpenSavageCommand =>
             new RelayCommand(() => {
-                this.obj_common    = this.repository.GetSavageCommonTest();
-                this.obj_multitest = this.repository.GetSavageMultitestTest();
-                this.obj_quiz      = this.repository.GetSavageQuizTest();
-                // DON'T MOVE THIS TO ANOTHER POSITION
-                this.HeaderText    = this.repository.GetNameSavage();
+                try
+                {
+                    this.obj_common = this.repository.GetSavageCommonTest();
+                    this.obj_multitest = this.repository.GetSavageMultitestTest();
+                    this.obj_quiz = this.repository.GetSavageQuizTest();
+                    // DON'T MOVE THIS TO ANOTHER POSITION
+                    this.HeaderText = this.repository.GetNameSavage();
 
-                InitializationComponents();
+                    InitializationComponents();
 
-                this.IsTestChosen = true;
+                    this.IsTestChosen = true;
 
-                DummyTheoryRepository.Instance.IsThroll = true;
+                    DummyTheoryRepository.Instance.IsThroll = true;
+                }
+                catch
+                {
+                    MessageBox.Show("Что-то пошло не так... Проверьте подключение к интернету", "Сообщение", MessageBoxButton.OK);
+                }
             });
 
         public ICommand OpenPearsonCommand =>
             new RelayCommand(() => {
-                this.obj_common    = this.repository.GetPearsonCommonTest();
-                this.obj_multitest = this.repository.GetPearsonMultitestTest();
-                this.obj_quiz      = this.repository.GetPearsonQuizTest();
-                // DON'T MOVE THIS TO ANOTHER POSITION
-                this.HeaderText    = this.repository.GetNamePearson();
+                try
+                {
+                    this.obj_common = this.repository.GetPearsonCommonTest();
+                    this.obj_multitest = this.repository.GetPearsonMultitestTest();
+                    this.obj_quiz = this.repository.GetPearsonQuizTest();
+                    // DON'T MOVE THIS TO ANOTHER POSITION
+                    this.HeaderText = this.repository.GetNamePearson();
 
-                InitializationComponents();
+                    InitializationComponents();
 
-                this.IsTestChosen = true;
+                    this.IsTestChosen = true;
 
-                DummyTheoryRepository.Instance.IsThroll = true;
+                    DummyTheoryRepository.Instance.IsThroll = true;
+                }
+                catch
+                {
+                    MessageBox.Show("Что-то пошло не так... Проверьте подключение к интернету", "Сообщение",MessageBoxButton.OK);
+                }
             });
 
         public ICommand BackCommand =>
