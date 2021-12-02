@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -23,7 +24,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         {
             this.Internet = CheckForInternetConnection();
             this.IsTestComplete = false;
-
+            this.Loading = false;
             this.bools = new ObservableCollection<Quadro<bool, bool, bool, bool>>();
             this.answers = new ObservableCollection<string>();
             this.AhShitHereWeGoAgain = new ObservableCollection<bool>();
@@ -46,7 +47,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
         }
 
         public string HeaderText { get; set; }
-
+        public bool Loading { get; set; }
         public bool IsTestChosen { get; set; }
         public bool IsMenuEnabled => !this.IsTestChosen;
         public bool Internet { get; set; }
@@ -65,17 +66,9 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             new RelayCommand(() => {
                 try
                 {
-                    this.obj_common = this.repository.GetSavageCommonTest();
-                    this.obj_multitest = this.repository.GetSavageMultitestTest();
-                    this.obj_quiz = this.repository.GetSavageQuizTest();
-                    // DON'T MOVE THIS TO ANOTHER POSITION
-                    this.HeaderText = this.repository.GetNameSavage();
-
-                    InitializationComponents();
-
-                    this.IsTestChosen = true;
-
-                    DummyTheoryRepository.Instance.IsThroll = true;
+                    SavageOpenBody();
+                    this.Loading = true;
+                    //MessageBox.Show("Загрузка", "Сообщение", MessageBoxButton.OK);
                 }
                 catch
                 {
@@ -87,17 +80,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             new RelayCommand(() => {
                 try
                 {
-                    this.obj_common = this.repository.GetPearsonCommonTest();
-                    this.obj_multitest = this.repository.GetPearsonMultitestTest();
-                    this.obj_quiz = this.repository.GetPearsonQuizTest();
-                    // DON'T MOVE THIS TO ANOTHER POSITION
-                    this.HeaderText = this.repository.GetNamePearson();
-
-                    InitializationComponents();
-
-                    this.IsTestChosen = true;
-
-                    DummyTheoryRepository.Instance.IsThroll = true;
+                    PearsonOpenBody();
+                    this.Loading = true;
                 }
                 catch
                 {
@@ -110,13 +94,14 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 Clear();
                 this.IsTestComplete = false;
                 this.IsTestChosen = false;
-
+                this.Loading = false;
                 DummyTheoryRepository.Instance.IsThroll = false;
             });
 
         public ICommand SendResultCommand =>
             new RelayCommand(() => {
                 ValidationTest();
+                this.Loading = false;
                 this.IsTestComplete = true;
                 user = new User( Environment.UserName, String.Format("{0}/{1}", NumberOfCorrect.ToString(), NumberOfTests.ToString()));
                 //future_file.ConvertToJson(user);
@@ -142,35 +127,44 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         public int random_seed { get; set; }
 
-        public void MixCommon()
+        public async void MixCommon()
         {
             Random random = new Random(random_seed);
             int j = 0;
-            for (int i = this.obj_common.Count - 1; i >= 1; i--)
-            {
-                j = random.Next(i + 1);
-                (this.obj_common[j], this.obj_common[i]) = (this.obj_common[i], this.obj_common[j]);
-            }
+            await Task.Run(() => {
+                for (int i = this.obj_common.Count - 1; i >= 1; i--)
+                {
+                    j = random.Next(i + 1);
+                    (this.obj_common[j], this.obj_common[i]) = (this.obj_common[i], this.obj_common[j]);
+                }
+            });
+            
         }
-        public void MixMultiTest()
+        public async void MixMultiTest()
         {
             Random random = new Random(random_seed);
             int j = 0;
-            for (int i = this.obj_multitest.Count - 1; i >= 1; i--)
-            {
-                j = random.Next(i + 1);
-                (this.obj_multitest[j], this.obj_multitest[i]) = (this.obj_multitest[i], this.obj_multitest[j]);
-            }
+            await Task.Run(()=>{
+                for (int i = this.obj_multitest.Count - 1; i >= 1; i--)
+                {
+                    j = random.Next(i + 1);
+                    (this.obj_multitest[j], this.obj_multitest[i]) = (this.obj_multitest[i], this.obj_multitest[j]);
+                }
+            });
+            
         }
-        public void MixQuiz()
+        public async void MixQuiz()
         {
             Random random = new Random(random_seed);
             int j = 0;
-            for (int i = this.obj_quiz.Count - 1; i >= 1; i--)
-            {
-                j = random.Next(i + 1);
-                (this.obj_quiz[j], this.obj_quiz[i]) = (this.obj_quiz[i], this.obj_quiz[j]);
-            }
+            await Task.Run(()=> {
+                for (int i = this.obj_quiz.Count - 1; i >= 1; i--)
+                {
+                    j = random.Next(i + 1);
+                    (this.obj_quiz[j], this.obj_quiz[i]) = (this.obj_quiz[i], this.obj_quiz[j]);
+                }
+            });
+            
         }
         #endregion
 
@@ -320,6 +314,36 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             {
                 return false;
             }
+        }
+
+        async void PearsonOpenBody()
+        {
+            await Task.Run(()=> this.obj_common = this.repository.GetPearsonCommonTest());
+            await Task.Run(() => this.obj_multitest = this.repository.GetPearsonMultitestTest());
+            await Task.Run(() => this.obj_quiz = this.repository.GetPearsonQuizTest());
+
+            // DON'T MOVE THIS TO ANOTHER POSITION
+            this.HeaderText = this.repository.GetNamePearson();
+
+            InitializationComponents();
+
+            this.IsTestChosen = true;
+
+            DummyTheoryRepository.Instance.IsThroll = true;
+        }
+        async void SavageOpenBody()
+        {
+            await Task.Run(() => this.obj_common = this.repository.GetSavageCommonTest());
+            await Task.Run(() => this.obj_multitest = this.repository.GetSavageMultitestTest());
+            await Task.Run(() => this.obj_quiz = this.repository.GetSavageQuizTest());
+            // DON'T MOVE THIS TO ANOTHER POSITION
+            this.HeaderText = this.repository.GetNameSavage();
+
+            InitializationComponents();
+
+            this.IsTestChosen = true;
+
+            DummyTheoryRepository.Instance.IsThroll = true;
         }
         #endregion
 

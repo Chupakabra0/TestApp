@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using TestApp.MVVM.Models;
 
 namespace TestApp.Core.Repository
@@ -14,18 +15,18 @@ namespace TestApp.Core.Repository
         {
             throw new NotImplementedException();
         }
-        public void PostPearson(User user)
+        public async void PostPearson(User user)
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25f6f088c3e91a3525bef/results";
             try
             {
-                Server(url, user);
+                await Task.Run(()=>Server(url, user));
             }
             catch
             {
                 try
                 {
-                    ServerPut(url, user);
+                    await Task.Run(() => ServerPut(url, user));
                 }
                 catch
                 {
@@ -33,18 +34,18 @@ namespace TestApp.Core.Repository
                 }
             }
         }
-        public void PostSavage(User user)
+        public async void PostSavage(User user)
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25771088c3e91a3525bda/results";
             try
             {
-                Server(url, user);
+                await Task.Run(() => Server(url, user));
             }
             catch
             {
                 try
                 {
-                    ServerPut(url, user);
+                    await Task.Run(() => ServerPut(url, user));
                 }
                 catch
                 {

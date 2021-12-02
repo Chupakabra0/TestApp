@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace TestApp.Core.Repository.Question
 {
@@ -47,10 +48,10 @@ namespace TestApp.Core.Repository.Question
             ServerSavage();
             return result.questions.quiz_tests;
         }
+
         private void ServerSavage()
         {
             var url = "https://pa-18-2-test-app.herokuapp.com/api/tests/61a25771088c3e91a3525bda";
-
             Server(url);
         }
         private void ServerPearson()
