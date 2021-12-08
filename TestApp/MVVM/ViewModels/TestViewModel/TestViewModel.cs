@@ -67,41 +67,41 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
                 try
                 {
                     SavageOpenBody();
-                    this.Loading = true;
+                    //this.Loading = true;
                     //MessageBox.Show("Загрузка", "Сообщение", MessageBoxButton.OK);
                 }
                 catch
                 {
                     MessageBox.Show("Что-то пошло не так... Проверьте подключение к интернету", "Сообщение", MessageBoxButton.OK);
                 }
-            });
+            }, () => !this.Loading);
 
         public ICommand OpenPearsonCommand =>
             new RelayCommand(() => {
                 try
                 {
                     PearsonOpenBody();
-                    this.Loading = true;
+                    //this.Loading = true;
                 }
                 catch
                 {
                     MessageBox.Show("Что-то пошло не так... Проверьте подключение к интернету", "Сообщение",MessageBoxButton.OK);
                 }
-            });
+            }, () => !this.Loading);
 
         public ICommand BackCommand =>
             new RelayCommand(() => {
                 Clear();
                 this.IsTestComplete = false;
                 this.IsTestChosen = false;
-                this.Loading = false;
+                //this.Loading = false;
                 DummyTheoryRepository.Instance.IsThroll = false;
             });
 
         public ICommand SendResultCommand =>
             new RelayCommand(() => {
                 ValidationTest();
-                this.Loading = false;
+                //this.Loading = false;
                 this.IsTestComplete = true;
                 user = new User( Environment.UserName, String.Format("{0}/{1}", NumberOfCorrect.ToString(), NumberOfTests.ToString()));
                 //future_file.ConvertToJson(user);
@@ -318,6 +318,8 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
 
         async void PearsonOpenBody()
         {
+            this.Loading = true;
+
             await Task.Run(()=> this.obj_common = this.repository.GetPearsonCommonTest());
             await Task.Run(() => this.obj_multitest = this.repository.GetPearsonMultitestTest());
             await Task.Run(() => this.obj_quiz = this.repository.GetPearsonQuizTest());
@@ -330,9 +332,12 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.IsTestChosen = true;
 
             DummyTheoryRepository.Instance.IsThroll = true;
+            this.Loading                            = false;
         }
         async void SavageOpenBody()
         {
+            this.Loading = true;
+
             await Task.Run(() => this.obj_common = this.repository.GetSavageCommonTest());
             await Task.Run(() => this.obj_multitest = this.repository.GetSavageMultitestTest());
             await Task.Run(() => this.obj_quiz = this.repository.GetSavageQuizTest());
@@ -344,6 +349,7 @@ namespace TestApp.MVVM.ViewModels.TestViewModel {
             this.IsTestChosen = true;
 
             DummyTheoryRepository.Instance.IsThroll = true;
+            this.Loading                            = false;
         }
         #endregion
 

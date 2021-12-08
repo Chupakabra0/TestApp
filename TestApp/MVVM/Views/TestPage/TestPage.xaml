@@ -42,10 +42,15 @@
             <!--<Controls:FormulaControl Style="{StaticResource BasicFormula}" Formula="Q = \pmatrix{1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 \cr 1 &amp; 2 &amp; 3 }"></Controls:FormulaControl>
 
             <TextBox></TextBox>-->
+        </StackPanel>
 
-            <!--<TextBlock Style="{StaticResource Content}">
-                Нехай ОПР вірішила, що природа знаходиться в стані β<Run BaselineAlignment="Subscript">j</Run>.	Який розв’язок α вона обере?
-            </TextBlock>-->
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <TextBlock Style="{StaticResource Content}"
+                       Text="Загрузка вопросов. Подождите, пожалуйста..."
+                       HorizontalAlignment="Center">
+            </TextBlock>
         </StackPanel>
 
         <StackPanel Orientation="Vertical"
