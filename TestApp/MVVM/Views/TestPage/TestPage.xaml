@@ -48,7 +48,7 @@
                     VerticalAlignment="Center"
                     Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}">
             <TextBlock Style="{StaticResource Content}"
-                       Text="Загрузка вопросов. Подождите, пожалуйста..."
+                       Text="Загрузка тестових питань. Зачекайте, будь ласка..."
                        HorizontalAlignment="Center">
             </TextBlock>
         </StackPanel>
@@ -78,7 +78,8 @@
                            Margin="0, 0, 100, 0"
                            Grid.Column="2"
                            Style="{StaticResource Header}">
-                    <Run Text="{Binding HeaderText}"></Run>/<Run Text="{Binding random_seed}"></Run>
+                    <Run Text="{Binding HeaderText}"></Run>
+                    <!--/<Run Text="{Binding random_seed}"></Run>-->
                 </TextBlock>
             </Grid>
 
